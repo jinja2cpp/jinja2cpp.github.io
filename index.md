@@ -13,6 +13,7 @@ C++ implementation of big subset of Jinja2 template engine features. This librar
 
 - [Introduction](#introduction)
 - [Getting started](#getting-started)
+  - [How to get Jinja2Coo](#how-to-get-jinja2cpp)
   - [More complex example](#more-complex-example)
     - [The simplest case](#the-simplest-case)
     - [Reflection](#reflection)
@@ -110,6 +111,13 @@ Hello World!!!
 `
 
 That's all!
+
+## How to get Jinja2Cpp
+
+The latest Conan.io package: [
+jinja2cpp/0.9.1@Manu343726/testing](https://bintray.com/manu343726/conan-packages/jinja2cpp%3AManu343726/0.9.1%3Atesting)
+
+The latest release: [Release 0.9.1](https://github.com/flexferrum/Jinja2Cpp/releases/latest)
 
 ## More complex example
 Let's say you have the following enum:
