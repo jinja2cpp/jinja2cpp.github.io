@@ -496,15 +496,20 @@ It's difficult to write complex template completely without errors. Missed brace
 - Location description
 
 For example, this template:
+{% raw %}
 ```
 {{ {'key'=,} }}
 ```
+{% endraw %}
+
 produces the following error message:
+{% raw %}
 ```
 noname.j2tpl:1:11: error: Expected expression, got: ','
 {{ {'key'=,} }}
        ---^-------
 ```
+{% endraw %}
 
 ## Other features
 The render procedure is stateless, so you can perform several renderings simultaneously in different threads. Even if you pass parameters:
