@@ -1,4 +1,7 @@
-# Jinja2Cpp
+---
+title: Jinja2Cpp project
+layout: post
+---
 
 C++ implementation of big subset of Jinja2 template engine features. This library was inspired by [Jinja2CppLight](https://github.com/hughperkins/Jinja2CppLight) project and brings support of mostly all Jinja2 templates features into C++ world.
 
@@ -39,7 +42,7 @@ Main features of Jinja2Cpp:
 - Conformance to [Jinja2 specification](http://jinja.pocoo.org/docs/2.10/)
 - Partial support for both narrow- and wide-character strings both for templates and parameters.
 - Built-in reflection for C++ types.
-- Powerful full-featured Jinja2 expressions with filtering (via '|' operator) and 'if'-expressions.
+- {% raw %}Powerful full-featured Jinja2 expressions with filtering (via '|' operator) and 'if'-expressions.{% endraw %}
 - Control statements (set, for, if).
 - Templates extention.
 - Macros
