@@ -47,6 +47,7 @@ Main features of Jinja2Cpp:
 
 For instance, this simple code:
 
+{% raw %}
 ```c++
 std::string source = R"(
 {{ ("Hello", 'world') | join }}!!!
@@ -60,6 +61,7 @@ tpl.Load(source);
 
 std::string result = tpl.RenderAsString(ValuesMap());
 ```
+{% endraw %}
 
 produces the result string:
 
@@ -86,9 +88,11 @@ jinja2::Template tpl;
 
 2. Populate it with template:
 
+{% raw %}
 ```c++
 tpl.Load("{{'Hello World' }}!!!");
 ```
+{% endraw %}
 
 3. Render the template:
 
@@ -142,6 +146,7 @@ Of course, you can write this producer in the way like [this](https://github.com
 ### The simplest case
 
 Firstly, you should define the simple jinja2 template (in the C++ manner):
+{% raw %}
 ```c++
 std::string enum2StringConvertor = R"(
 inline const char* {{enumName}}ToString({{enumName}} e)
@@ -156,6 +161,8 @@ inline const char* {{enumName}}ToString({{enumName}} e)
     return "Unknown Item";
 })";
 ```
+{% endraw %}
+
 As you can see, this template is similar to the C++ sample code above, but some parts replaced by placeholders ("parameters"). These placeholders will be replaced with the actual text during template rendering process. In order to this happen, you should fill up the rendering parameters. This is a simple dictionary which maps the parameter name to the corresponding value:
 
 ```c++
@@ -228,6 +235,7 @@ struct TypeReflection<EnumDescriptor> : TypeReflected<EnumDescriptor>
 };
 ```
 And in this case you need to correspondingly change the template itself and it's invocation:
+{% raw %}
 ```c++
 std::string enum2StringConvertor = R"(
 inline const char* {{enum.enumName}}ToString({{enum.enumName}} e)
@@ -248,6 +256,8 @@ inline const char* {{enum.enumName}}ToString({{enum.enumName}} e)
     };
 // ...
 ```
+{% endraw %}
+
 Every specified field will be reflected into Jinja2Cpp internal data structures and can be accessed from the template without additional efforts. Quite simply! As you can see, you can use 'dot' notation to access named members of some parameter as well, as index notation like this: `enum['enumName']`. With index notation you can access to the particular item of a list: `enum.items[3]` or `enum.items[itemIndex]` or `enum['items'][itemIndex]`.
 
 ### 'set' statement
@@ -266,6 +276,7 @@ enum Animals
 }
 ```
 In this case you need to prefix both enum name and it's items with namespace prefix in the generated code. Like this:
+{% raw %}
 ```c++
 std::string enum2StringConvertor = R"(
 inline const char* {{enum.enumName}}ToString({{enum.nsScope}}::{{enum.enumName}} e)
@@ -280,7 +291,10 @@ inline const char* {{enum.enumName}}ToString({{enum.nsScope}}::{{enum.enumName}}
     return "Unknown Item";
 })";
 ```
+{% endraw %}
+
 This template will produce 'world::' prefix for our new scoped enum (and enum itmes). And '::' for the ones in global scope. But you may want to eliminate the unnecessary global scope prefix. And you can do it this way:
+{% raw %}
 ```c++
 {% set prefix = enum.nsScope + '::' if enum.nsScope else '' %}
 std::string enum2StringConvertor = R"(inline const char* {{enum.enumName}}ToString({{prefix}}::{{enum.enumName}} e)
@@ -295,6 +309,8 @@ std::string enum2StringConvertor = R"(inline const char* {{enum.enumName}}ToStri
     return "Unknown Item";
 })";
 ```
+{% endraw %}
+
 This template uses two significant jinja2 template features:
 1. The 'set' statement. You can declare new variables in your template. And you can access them by the name.
 2. if-expression. It works like a ternary '?:' operator in C/C++. In C++ the code from the sample could be written in this way:
@@ -305,6 +321,7 @@ I.e. left part of this expression (before 'if') is a true-branch of the statemen
 
 ## 'extends' statement
 In general, C++ header files look similar to each other. Almost every header file has got header guard, block of 'include' directives and then block of declarations wrapped into namespaces. So, if you have several different Jinja2 templates for header files production it can be a good idea to extract the common header structure into separate template. Like this:
+{% raw %}
 ```c++
 {% if headerGuard is defined %}
  #ifndef {{headerGuard}}
@@ -346,8 +363,10 @@ In general, C++ header files look similar to each other. Almost every header fil
  #endif // {{headerGuard}}
 {% endif %}
 ```
+{% endraw %}
 
 In this sample you can see the '**block**' statements. They are placeholders. Each block is a part of generic template which can be replaced by more specific template which 'extends' generic:
+{% raw %}
 ```c++
 {% extends "header_skeleton.j2tpl" %}
 
@@ -375,11 +394,13 @@ private:
 {% endfor %}
 {% endblock %}
 ```
+{% endraw %}
 
 '**extends**' statement here defines the template to extend. Set of '**block**' statements after defines actual filling of the corresponding blocks from the extended template. If block from the extended template contains something (like ```namespaced_decls``` from the example above), this content can be rendered with help of '**super()**' function. In other case the whole content of the block will be replaced. More detailed description of template inheritance feature can be found in [Jinja2 documentation](http://jinja.pocoo.org/docs/2.10/templates/#template-inheritance).
 
 ## Macros
 Ths sample above violates 'DRY' rule. It contains the code which could be generalized. And Jinja2 supports features for such kind generalization. This feature called '**macro**'. The sample can be rewritten the following way:
+{% raw %}
 ```c++
 {% macro MethodsDecl(class, access) %}
 {% for method in class.methods | rejectattr('isImplicit') | selectattr('accessType', 'in', access) %}
@@ -399,11 +420,13 @@ private:
 
 {% endfor %}
 ```
+{% endraw %}
 
 `MethodsDecl` statement here is a **macro** which takes two arguments. First one is a class with method definitions. The second is a tuple of access specifiers. Macro takes non-implicit methods from the methods collection (`rejectattr('isImplicit')` filter) then select such methods which have right access specifier (`selectattr('accessType', 'in', access)`), then just prints the method full prototype. Finally, the macro is invoked as a regular function call: `MethodsDecl(class, ['Public'])` and replaced with rendered macro body.
 
 There is another way to invoke macro: the **call** statement. Simply put, this is a way to call macro with *callback*. Let's take another sample:
 
+{% raw %}
 ```c++
 {% macro InlineMethod(resultType='void', methodName, methodParams=[]) %}
 inline {{ resultType }} {{ methodName }}({{ methodParams | join(', ') }} )
@@ -423,6 +446,7 @@ inline {{ resultType }} {{ methodName }}({{ methodParams | join(', ') }} )
     return "Unknown Item";
 {% endcall %}
 ```
+{% endraw %}
 
 Here is an `InlineMacro` which just describe the inline method definition skeleton. This macro doesn't contain the actual method body. Instead of this it calls `caller` special function. This function invokes the special **callback** macro which is a body of `call` statement. And this macro can have parameters as well. More detailed this mechanics described in the [Jinja2 documentation](http://jinja.pocoo.org/docs/2.10/templates/#macros).
 
@@ -430,10 +454,12 @@ Here is an `InlineMacro` which just describe the inline method definition skelet
 
 With help of `applymacro` filter macro can be called in filtering context. `applymacro` works similar to `map` (or `test`) filter with one exception: instead of name of other filter it takes name of macro via `macro` param and pass the rest of arguments to it. The object which is been filtered is passed as the first positional argument. For example:
 
+{% raw %}
 ```
 {% macro toUpper(str) %}{{ str | upper }}{% endmacro %}
 {{ 'Hello World!' | applymacro(macro='toUpper') }}
 ```
+{% endraw %}
 
 produces the result `HELLO WORLD`. `applymacro` can be applied to the sequences via `map` filter. Also, macro name can be `caller`. In this case outer `call` statement will be invoked during macro application.
 
@@ -453,12 +479,14 @@ jinja2::ValuesMap params;
 
 As a first parameter this method takes the callable itself. It can be lambda, the std::function<> instance or pointer to function. The rest of params are callable arguments descriptors, which are provided via `ArgInfo` structure. In the sample above user-defined callable `concat` is introduced, which take two argument: `str1` and `str2`. This callable can be accessed from the template in the following ways:
 
+{% raw %}
 ```
 {{ concat('Hello', 'World!') }}
 {{ concat(str2='World!', str1='Hello') }}
 {{ concat(str2='World!') }}
 {{ concat('Hello') }}
 ```
+{% endraw %}
 
 ## Error reporting
 It's difficult to write complex template completely without errors. Missed braces, wrong characters, incorrect names... Everything is possible. So, it's crucial to be able to get informative error report from the template engine. Jinja2Cpp provides such kind of report. ```Template::Load``` method (and TemplateEnv::LoadTemplate respectively) return instance of ```ErrorInfo``` class which contains details about the error. These details include:
