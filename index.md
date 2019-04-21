@@ -14,6 +14,7 @@ C++ implementation of big subset of Jinja2 template engine features. This librar
 - [Introduction](#introduction)
 - [Getting started](#getting-started)
   - [How to get Jinja2Coo](#how-to-get-jinja2cpp)
+  - [The basic sample](#the-basic-sample)
   - [More complex example](#more-complex-example)
     - [The simplest case](#the-simplest-case)
     - [Reflection](#reflection)
@@ -78,10 +79,19 @@ hello; world!!!
 
 # Getting started
 
-In order to use Jinja2Cpp in your project you have to:
-* Clone the Jinja2Cpp repository
-* Build it according with the instructions
+## How to get Jinja2Cpp
+
+Get the latest Conan.io package: [
+jinja2cpp/0.9.1@Manu343726/testing](https://bintray.com/manu343726/conan-packages/jinja2cpp%3AManu343726/0.9.1%3Atesting)
+
+Or download the latest release: [Release 0.9.1](https://github.com/flexferrum/Jinja2Cpp/releases/latest)
+
+Or:
+* Clone the Jinja2Cpp [repository](https://github.com/flexferrum/Jinja2Cpp)
+* Build it according with the [instructions](#build-and-install)
 * Link to your project.
+
+## The basic example
 
 Usage of Jinja2Cpp in the code is pretty simple:
 1. Declare the jinja2::Template object:
@@ -111,13 +121,6 @@ Hello World!!!
 `
 
 That's all!
-
-## How to get Jinja2Cpp
-
-The latest Conan.io package: [
-jinja2cpp/0.9.1@Manu343726/testing](https://bintray.com/manu343726/conan-packages/jinja2cpp%3AManu343726/0.9.1%3Atesting)
-
-The latest release: [Release 0.9.1](https://github.com/flexferrum/Jinja2Cpp/releases/latest)
 
 ## More complex example
 Let's say you have the following enum:
