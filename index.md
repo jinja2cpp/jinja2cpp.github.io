@@ -42,7 +42,7 @@ Main features of Jinja2Cpp:
 - Conformance to [Jinja2 specification](http://jinja.pocoo.org/docs/2.10/)
 - Partial support for both narrow- and wide-character strings both for templates and parameters.
 - Built-in reflection for C++ types.
-- Powerful full-featured Jinja2 expressions with filtering (via '||' operator) and 'if'-expressions.
+- Powerful full-featured Jinja2 expressions with filtering (via '\|' operator) and 'if'-expressions.
 - Control statements (set, for, if).
 - Templates extention.
 - Macros
