@@ -1,9 +1,9 @@
 theme: jekyll-theme-slate
 title: Jinja2Cpp project
 github:
-  repository_url: https://github.com/jinja2cpp/jinja2cpp
-  zip_url: https://github.com/flexferrum/Jinja2Cpp/archive/0.9.1.zip
-  tar_url: https://github.com/flexferrum/Jinja2Cpp/archive/0.9.1.tar.gz
-  releases_url: https://github.com/flexferrum/Jinja2Cpp/releases
-  issues_url: https://github.com/flexferrum/Jinja2Cpp/issues
+  - repository_url: https://github.com/jinja2cpp/jinja2cpp
+  - zip_url: https://github.com/flexferrum/Jinja2Cpp/archive/0.9.1.zip
+  - tar_url: https://github.com/flexferrum/Jinja2Cpp/archive/0.9.1.tar.gz
+  - releases_url: https://github.com/flexferrum/Jinja2Cpp/releases
+  - issues_url: https://github.com/flexferrum/Jinja2Cpp/issues
   
