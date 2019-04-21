@@ -1,6 +1,6 @@
-plugins:
-  - jekyll-redirect-from
-  - jekyll-github-metadata
+# plugins:
+#  - jekyll-redirect-from
+#  - jekyll-github-metadata
 
 theme: jekyll-theme-slate
 title: Jinja2Cpp project
