@@ -14,4 +14,5 @@ github:
   is_project_page: true
   owner_url: https://github.com/flexferrum
   owner_name: Flex Ferrum
+  project_tagline: Powerful text template engine for your C++ project!
   
