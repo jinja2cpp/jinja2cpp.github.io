@@ -1,2 +1,4 @@
 theme: jekyll-theme-slate
 title: Jinja2Cpp project
+github:
+  repository_url: https://github.com/jinja2cpp/jinja2cpp
