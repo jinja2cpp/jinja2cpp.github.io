@@ -13,7 +13,7 @@ C++ implementation of big subset of Jinja2 template engine features. This librar
 
 - [Introduction](#introduction)
 - [Getting started](#getting-started)
-  - [How to get Jinja2Coo](#how-to-get-jinja2cpp)
+  - [How to get Jinja2Cpp](#how-to-get-jinja2cpp)
   - [The basic sample](#the-basic-sample)
   - [More complex example](#more-complex-example)
     - [The simplest case](#the-simplest-case)
