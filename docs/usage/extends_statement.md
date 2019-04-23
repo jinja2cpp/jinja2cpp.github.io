@@ -1,6 +1,6 @@
 ---
 layout: default
-title: \'extends\' Statement
+title: extends Statement
 parent: Jinja2Cpp Usage
 nav_order: 3
 ---
