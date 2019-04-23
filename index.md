@@ -16,7 +16,7 @@ Jinja2Cpp is a modern C++ implementation of the [Python Jinja2 template engine](
 
 - C++14/17 library
 - Supports mainstream compilers (Visual C++, gcc, clang)
-- Easy-to-use public interface. Just load templates and render them.
+- Easy-to-use interface.
 - Conformance to [Jinja2 specification](http://jinja.pocoo.org/docs/2.10/)
 - Partial support for both narrow- and wide-character strings both for templates and parameters.
 - Built-in reflection for C++ types.
