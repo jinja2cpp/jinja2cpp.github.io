@@ -39,7 +39,7 @@ Or follow the [build and install instructions](/docs/build_and_install.html)
 ## About the project
 {: .no_toc }
 
-Jinja2C++ is &copy; 2018-2019 by [Flex Ferrum](https://github.com/flexferrum). 
+Jinja2Cpp is &copy; 2018-2019 by [Flex Ferrum](https://github.com/flexferrum). 
 
 ### License
 {: .no_toc }
