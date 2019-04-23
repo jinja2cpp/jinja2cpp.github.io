@@ -2,6 +2,8 @@
 layout: default
 title: Jinja2Cpp Usage
 nav_order: 3
+has_children: true
+permalink: /docs/usage
 ---
 
 Let's say you have the following enum:
