@@ -52,7 +52,9 @@ Hello; world!!!
 hello; world!!!
 ```
 
-# Acknowledgments
+## Acknowledgments
+{: .no_toc }
+
 Thanks to authors of original Jinja2 specification for the exceptional work!
 
 Thanks to @manu343726 for CMake scripts improvement, conan.io packaging and bugs hunting and fixing.
