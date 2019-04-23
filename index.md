@@ -1,6 +1,9 @@
 ---
-title: Jinja2Cpp project
 layout: default
+title: Home
+nav_order: 1
+description: "Powerful text template engine for your C++ project!"
+permalink: /
 ---
 
 C++ implementation of big subset of Jinja2 template engine features. This library was inspired by [Jinja2CppLight](https://github.com/hughperkins/Jinja2CppLight) project and brings support of mostly all Jinja2 templates features into C++ world.
