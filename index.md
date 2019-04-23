@@ -26,6 +26,8 @@ Jinja2Cpp is a modern C++ implementation of the [Python Jinja2 template engine](
 - Macros ('macro', 'call').
 - Rich error reporting.
 
+[View on GitHub](https://github.com/jinja2cpp/Jinja2Cpp){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on Conan](https://bintray.com/manu343726/conan-packages/jinja2cpp%3AManu343726/0.9.1%3Atesting){: .btn .fs-5 .mb-4 .mb-md-0 }
+
 ## How to get Jinja2Cpp
 {: .no_toc }
 
