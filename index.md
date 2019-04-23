@@ -9,7 +9,7 @@ permalink: /
 # Bring powerful text template engine to your C++ project!
 {: .no_toc }
 
-{: .fs-7 }
+{: .fs-6 }
 Jinja2Cpp is a modern C++ implementation of the [Python Jinja2 template engine](http://jinja.pocoo.org/docs/2.10/). Originally inspired by [Jinja2CppLight](https://github.com/hughperkins/Jinja2CppLight) library now Jinja2Cpp brings support of mostly all Jinja2 templates engine features into C++ world.
 {: .fs-6 .fw-300 }
 
