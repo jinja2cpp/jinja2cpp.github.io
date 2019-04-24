@@ -6,6 +6,8 @@ has_children: true
 permalink: /docs/usage
 ---
 
+# Jinja2Cpp usage
+
 Let's say you have the following enum:
 
 ```c++
