@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Jinja2C++ Home
 nav_order: 1
 description: "Powerful text template engine for your C++ project!"
 permalink: /
@@ -10,10 +10,10 @@ permalink: /
 {: .no_toc }
 
 {: .fs-6 }
-Jinja2Cpp is a modern C++ implementation of the [Python Jinja2 template engine](http://jinja.pocoo.org/docs/2.10/). Originally inspired by [Jinja2CppLight](https://github.com/hughperkins/Jinja2CppLight) library now Jinja2Cpp brings support of mostly all Jinja2 templates engine features into C++ world.
+Jinja2C++ is a modern C++ implementation of the [Python Jinja2 template engine](http://jinja.pocoo.org/docs/2.10/). Originally inspired by [Jinja2CppLight](https://github.com/hughperkins/Jinja2CppLight) library now Jinja2C++ brings support of mostly all Jinja2 templates engine features into C++ world.
 {: .fs-6 .fw-300 }
 
-## Main features of Jinja2Cpp:
+## Main features of Jinja2C++:
 {: .no_toc }
 
 - C++14/17 library
@@ -30,7 +30,7 @@ Jinja2Cpp is a modern C++ implementation of the [Python Jinja2 template engine](
 
 [View it on GitHub](https://github.com/jinja2cpp/Jinja2Cpp){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on Conan](https://bintray.com/manu343726/conan-packages/jinja2cpp%3AManu343726){: .btn .fs-5 .mb-4 .mb-md-0 }
 
-## How to get Jinja2Cpp
+## How to get Jinja2C++
 {: .no_toc }
 
 The simpliest way: to get the latest conan.io package: [
@@ -41,12 +41,12 @@ Or follow the [build and install instructions](/docs/build_and_install.html)
 ## About the project
 {: .no_toc }
 
-Jinja2Cpp is &copy; 2018-2019 by [Flex Ferrum](https://github.com/flexferrum). 
+Jinja2C++ is &copy; 2018-2019 by [Flex Ferrum](https://github.com/flexferrum). 
 
 ### License
 {: .no_toc }
 
-Jinja2Cpp is distributed by an [Mozilla Public License 2.0](https://github.com/jinja2cpp/Jinja2Cpp/blob/master/LICENSE).
+Jinja2C++ is distributed by an [Mozilla Public License 2.0](https://github.com/jinja2cpp/Jinja2Cpp/blob/master/LICENSE).
 
 ### Contributing
 {: .no_toc }
