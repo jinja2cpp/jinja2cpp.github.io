@@ -5,6 +5,7 @@ nav_order: 1
 description: "Powerful text template engine for your C++ project!"
 permalink: /
 ---
+
 <div align="center"><img width="200" src="https://avatars0.githubusercontent.com/u/49841676?s=200&v=4"></div>
 
 # Bring powerful text template engine to your C++ project!
