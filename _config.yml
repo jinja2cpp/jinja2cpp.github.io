@@ -6,7 +6,7 @@
 remote_theme: pmarsceill/just-the-docs
 
 aux_links:
-  "Jinja2Cpp on GitHub":
+  "Jinja2C++ on GitHub":
     - "https://github.com/jinja2cpp/Jinja2Cpp"
 
 title: Jinja2C++ project
