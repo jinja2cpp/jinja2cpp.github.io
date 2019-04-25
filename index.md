@@ -8,7 +8,7 @@ permalink: /
 
 <div align="center"><img width="200" src="https://avatars0.githubusercontent.com/u/49841676?s=200&v=4"></div>
 
-# Bring powerful text template engine to your C++ project!
+# Bring the powerful text template engine to your C++ project!
 {: .no_toc }
 
 {: .fs-6 }
