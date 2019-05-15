@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Jinja2Cpp Usage
+title: Jinja2C++ Usage
 nav_order: 3
 has_children: true
 permalink: /docs/usage
 ---
 
-# Jinja2Cpp usage
+# Jinja2C++ usage
 
 Let's say you have the following enum:
 
@@ -42,7 +42,7 @@ inline const char* AnimalsToString(Animals e)
 
 Of course, you can write this producer in the way like [this](https://github.com/flexferrum/autoprogrammer/blob/87a9dc8ff61c7bdd30fede249757b71984e4b954/src/generators/enum2string_generator.cpp#L140). It's too complicated for writing 'from scratch'. Actually, there is a better and simpler way.
 
-### The simplest case
+## The simplest case
 
 Firstly, you should define the simple jinja2 template (in the C++ manner):
 {% raw %}
@@ -70,7 +70,7 @@ jinja2::ValuesMap params {
     {"items", {"Dog", "Cat", "Monkey", "Elephant"}},
 };
 ```
-An finally, you can render this template with Jinja2Cpp library:
+An finally, you can render this template with Jinja2C++ library:
 
 ```c++
 jinja2::Template tpl;
