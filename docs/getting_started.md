@@ -23,27 +23,20 @@ Or:
 
 Usage of Jinja2C++ in the code is pretty simple:
 1. Include Jinja2C++ template declaration:
-
 ```c++
 #include <jinja2/template.h>
 ```
-
-1. Declare the jinja2::Template object:
-
+2. Declare the jinja2::Template object:
 ```c++
 jinja2::Template tpl;
 ```
-
-2. Populate it with template:
-
+3. Populate it with template:
 {% raw %}
 ```c++
 tpl.Load("{{'Hello World' }}!!!");
 ```
 {% endraw %}
-
-3. Render the template:
-
+4. Render the template:
 ```c++
 std::cout << tpl.RenderAsString(jinja2::ValuesMap{}) << std::endl;
 ```
