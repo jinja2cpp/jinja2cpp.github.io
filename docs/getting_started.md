@@ -16,7 +16,7 @@ Or download the latest release: [Release 0.9.1](https://github.com/flexferrum/Ji
 
 Or:
 - Clone the Jinja2C++ [repository](https://github.com/jinja2cpp/Jinja2Cpp)
-- Build it according with the [instructions](build-and-install.html)
+- Build it according with the [instructions](build_and_install.html)
 - Link to your project.
 
 ## The basic example
