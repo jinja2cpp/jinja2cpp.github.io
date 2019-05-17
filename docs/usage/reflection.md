@@ -1,11 +1,11 @@
 ---
-layout: default
+layout: prev_next_page
 title: Reflection
-parent: Jinja2Cpp Usage
+parent: JinjaC++ Usage
 nav_order: 5
 ---
 
-### Reflection
+# Reflection
 Let's imagine you don't want to fill the enum descriptor by hand, but want to fill it with help of some code parsing tool ([autoprogrammer](https://github.com/flexferrum/autoprogrammer) or [cppast](https://github.com/foonathan/cppast)). In this case you can define structure like this:
 
 ```c++
