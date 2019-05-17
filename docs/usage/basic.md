@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: prev_next_page
 title: Basic Features
 parent: Jinja2C++ Usage
 nav_order: 1
