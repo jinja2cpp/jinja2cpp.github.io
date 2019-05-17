@@ -102,4 +102,4 @@ inline const char* AnimalsToString(Animals e)
 
 You can call 'Render' method many times, with different parameters set, from different threads simultaniously. Everything will be fine: every time you call 'Render' you will get the result depended only on provided params (or global settings taken from the `TemplateEnv`).
 
-<p><span align="center"><a href="../usage.html">Up</a> | <a href="main_statements.html">Next &gt;</a></span></p>
+<p><div align="center">Prev | <a href="../usage.html">Up</a> | <a href="main_statements.html">Next &gt;</a></div></p>
