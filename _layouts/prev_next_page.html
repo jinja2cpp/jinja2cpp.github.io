@@ -19,9 +19,6 @@ layout: default
   {% assign current = child %}
   {% if child.title == page.parent %}
     {% assign parent_page = child %}
-    parent.nav_order (1) = {{ parent_page.nav_order }}<br/>
-    parent.url (1) = {{ parent_page.url }}<br/>
-    parent.title (1) = {{ parent_page.title }}<br/>
   {% endif %}
   {% if child.parent == page.parent and  child.title == page.title %}
     {% assign cur_page = child %}
