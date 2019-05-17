@@ -5,6 +5,15 @@ nav_order: 5
 ---
 
 # Changelog
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+
 ## Version 0.9.1
 * `applymacro` filter added which allows to apply arbitrary macro as a filter
 * dependencies to boost removed from the public interface
