@@ -2,7 +2,7 @@
 layout: prev_next_page
 title: "'extends' Statement"
 parent: Jinja2Cpp Usage
-nav_order: 4
+nav_order: 3
 ---
 
 # 'extends' statement
