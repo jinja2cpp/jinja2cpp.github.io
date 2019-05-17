@@ -6,8 +6,23 @@ nav_order: 2
 ---
 
 # Main Jinja2C++ statements
+{: .no_toc }
 
-### 'set' statement
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+## Condition statement
+
+TODO:
+
+## Iteration statement
+
+TODO:
+
+## 'set' statement
 But what if enum `Animals` will be in the namespace?
 
 ```c++
