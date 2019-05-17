@@ -112,5 +112,16 @@ next.parent = {{ next_page.parent }}<br/>
 next.nav_order = {{ next_page.nav_order }}<br/>
 next.url = {{ next_page.url }}<br/>
 next.title = {{ next_page.title }}<br/><br/>
-<p><div align="center">&lt; Prev | <a href="{{ page.parent.url }}">Up</a> | <a href="main_statements.html">Next &gt;</a></div></p>
+<p><div align="center">
+{% if prev_page != nil and prev_page.parent == page.parent %}
+    <a href="{{ prev_page.url | absolute_url }}">&lt; Prev</a>
+{% else %}
+    &lt; Prev
+{% endif %} | <a href="{{ parent_page.url | absolute_url }}">Up</a> | 
+{% if next_page != nil and next_page.parent == page.parent %}
+    <a href="{{ next_page.url | absolute_url }}">Next &gt;</a>
+{% else %}
+    Next &gt;
+{% endif %}
+</div></p>
 
