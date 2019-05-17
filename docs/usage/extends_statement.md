@@ -1,7 +1,7 @@
 ---
 layout: prev_next_page
 title: "'extends' Statement"
-parent: Jinja2Cpp Usage
+parent: Jinja2C++ Usage
 nav_order: 3
 ---
 
