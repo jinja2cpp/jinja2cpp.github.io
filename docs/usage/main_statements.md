@@ -69,15 +69,22 @@ I.e. left part of this expression (before 'if') is a true-branch of the statemen
 {% assign children_list = site.pages | sort:"nav_order" %}
 {% for child in children_list %}
   {% if child == page.parent %}
+    {% assign parent_page_info = child %}
+    parent.nav_order (0) = {{ child.nav_order }}<br/>
+    parent.url (0) = {{ child.url }}<br/>
+    parent.title (0) = {{ child.title }}<br/>
+    parent.nav_order (1) = {{ parent_page_info.nav_order }}<br/>
+    parent.url (1) = {{ parent_page_info.url }}<br/>
+    parent.title (1) = {{ parent_page_info.title }}<br/>
   {% assign parent_page_info = child %}
   {% endif %}
   {% if child.parent == page.parent and  child.title == page.title %}
-    child.nav_order = {{ child.nav_order }}</br>
+    child.nav_order = {{ child.nav_order }}<br/>
     child.url = {{ child.url }}<br/>
-    parent.nav_order = {{ parent.nav_order }}<br/>
+    parent.nav_order = {{ parent_page_info.nav_order }}<br/>
     parent.url = {{ parent_page_info.url }}<br/>
     parent.title = {{ parent_page_info.title }}<br/>
-    forloop.index = {{ parent_page_info.index }}<br/>
+    forloop.index = {{ forloop.index }}<br/>
     {% unless forloop.first %}
     prev_url = {{ children_list[forloop.index0 - 1].url }}<br/>
     {% endunless %}
