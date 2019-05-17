@@ -1,9 +1,11 @@
 ---
 layout: default
-title: "'set' Statement"
-parent: Jinja2Cpp Usage
+title: "Main statements"
+parent: Jinja2C++ Usage
 nav_order: 2
 ---
+
+# Main Jinja2C++ statements
 
 ### 'set' statement
 But what if enum `Animals` will be in the namespace?
@@ -63,3 +65,6 @@ This template uses two significant jinja2 template features:
 std::string prefix = !descr.nsScope.empty() ? descr.nsScope + "::" : "";
 ```
 I.e. left part of this expression (before 'if') is a true-branch of the statement. Right part (after 'else') - false-branch, which can be omitted. As a condition you can use any expression convertible to bool.
+
+<p><div align="center">&lt; Prev | <a href="{{ page.parent.url }}">Up</a> | <a href="main_statements.html">Next &gt;</a></div></p>
+
