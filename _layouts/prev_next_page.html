@@ -12,7 +12,7 @@ layout: default
     {% endif %}
   {% endunless %}
   {% unless cur_page == nil %}
-    {% if next_page == nil %}
+    {% if next_page == nil and child.parent == page.parent %}
         {% assign next_page = child %}
     {% endif %}
   {% endunless %}
