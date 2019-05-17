@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Jinja2C++ Home
+title: Home
 nav_order: 1
 description: "Powerful text template engine for your C++ project!"
 permalink: /
