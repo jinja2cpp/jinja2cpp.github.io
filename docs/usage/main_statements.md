@@ -76,9 +76,9 @@ I.e. left part of this expression (before 'if') is a true-branch of the statemen
     parent.nav_order = {{ parent.nav_order }}</br>
     parent.url = {{ parent.url }}</br>
     parent.title = {{ parent.title }}</br>
-    forloop.prev = {{ loop.prev }}</br>
-    forloop.next = {{ loop.prev }}</br>
-    forloop.index = {{ loop.prev }}</br>
+    forloop.prev = {{ forloop.prev }}</br>
+    forloop.next = {{ forloop.prev }}</br>
+    forloop.index = {{ forloop.prev }}</br>
     {% if not forloop.first %}
     prev_url = {{ children_list[forloop.index0 - 1].url }}</br>
     {% endif %}
