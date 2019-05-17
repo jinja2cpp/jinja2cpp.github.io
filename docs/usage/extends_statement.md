@@ -1,11 +1,11 @@
 ---
-layout: default
+layout: prev_next_page
 title: "'extends' Statement"
 parent: Jinja2Cpp Usage
-nav_order: 3
+nav_order: 4
 ---
 
-## 'extends' statement
+# 'extends' statement
 In general, C++ header files look similar to each other. Almost every header file has got header guard, block of 'include' directives and then block of declarations wrapped into namespaces. So, if you have several different Jinja2 templates for header files production it can be a good idea to extract the common header structure into separate template. Like this:
 {% raw %}
 ```c++
