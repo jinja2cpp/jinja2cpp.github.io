@@ -72,8 +72,9 @@ I.e. left part of this expression (before 'if') is a true-branch of the statemen
     {% assign prev_page = current %}
   {% endunless %}
   {% unless cur_page == nil %}
-    {% assign next_page = child %}
-    {% break %}
+    {% if next_page == nil %}
+        {% assign next_page = child %}
+    {% endif %}
   {% endunless %}
   {% assign current = child %}
   {% if child.title == page.parent %}
