@@ -1,11 +1,21 @@
 ---
-layout: default
+layout: prev_next_page
 title: Macros
-parent: Jinja2Cpp Usage
+parent: Jinja2C++ Usage
 nav_order: 4
 ---
 
-## Macros
+# Macros
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+## Defining macro
+
 Ths sample above violates 'DRY' rule. It contains the code which could be generalized. And Jinja2 supports features for such kind generalization. This feature called '**macro**'. The sample can be rewritten the following way:
 {% raw %}
 ```c++
@@ -30,6 +40,8 @@ private:
 {% endraw %}
 
 `MethodsDecl` statement here is a **macro** which takes two arguments. First one is a class with method definitions. The second is a tuple of access specifiers. Macro takes non-implicit methods from the methods collection (`rejectattr('isImplicit')` filter) then select such methods which have right access specifier (`selectattr('accessType', 'in', access)`), then just prints the method full prototype. Finally, the macro is invoked as a regular function call: `MethodsDecl(class, ['Public'])` and replaced with rendered macro body.
+
+## 'call' statement
 
 There is another way to invoke macro: the **call** statement. Simply put, this is a way to call macro with *callback*. Let's take another sample:
 
@@ -57,7 +69,7 @@ inline {{ resultType }} {{ methodName }}({{ methodParams | join(', ') }} )
 
 Here is an `InlineMacro` which just describe the inline method definition skeleton. This macro doesn't contain the actual method body. Instead of this it calls `caller` special function. This function invokes the special **callback** macro which is a body of `call` statement. And this macro can have parameters as well. More detailed this mechanics described in the [Jinja2 documentation](http://jinja.pocoo.org/docs/2.10/templates/#macros).
 
-### 'applymacro' filter
+## 'applymacro' filter
 
 With help of `applymacro` filter macro can be called in filtering context. `applymacro` works similar to `map` (or `test`) filter with one exception: instead of name of other filter it takes name of macro via `macro` param and pass the rest of arguments to it. The object which is been filtered is passed as the first positional argument. For example:
 
