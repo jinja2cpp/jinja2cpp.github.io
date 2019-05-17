@@ -78,9 +78,6 @@ I.e. left part of this expression (before 'if') is a true-branch of the statemen
     forloop.next = {{ forloop.prev }}</br>
     forloop.index = {{ forloop.prev }}</br>
     <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>
-    {% if not forloop.first %}
-    prev_url = {{ children_list[forloop.index0 - 1].url }}</br>
-    {% endif %}
   {% endif %}
 {% endfor %}
 <p><div align="center">&lt; Prev | <a href="{{ page.parent.url }}">Up</a> | <a href="main_statements.html">Next &gt;</a></div></p>
