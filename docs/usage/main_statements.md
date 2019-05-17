@@ -68,35 +68,44 @@ I.e. left part of this expression (before 'if') is a true-branch of the statemen
 
 {% assign children_list = site.html_pages | sort:"nav_order" %}
 {% for child in children_list %}
+  {% unless forloop.first %}
+    {% assign prev_page = current %}
+  {% endunless %}
+  {% unless cur_page == nil %}
+    {% assign next_page = child %}
+    {% break %}
+  {% endunless %}
+  {% assign current = cur_page %}
   {% if child.title == page.parent %}
-    {% assign parent_page_info = child %}
-    parent.nav_order (0) = {{ child.nav_order }}<br/>
-    parent.url (0) = {{ child.url }}<br/>
-    parent.title (0) = {{ child.title }}<br/>
-    parent.nav_order (1) = {{ parent_page_info.nav_order }}<br/>
-    parent.url (1) = {{ parent_page_info.url }}<br/>
-    parent.title (1) = {{ parent_page_info.title }}<br/>
+    {% assign parent_page = child %}
+    parent.nav_order (1) = {{ parent_page.nav_order }}<br/>
+    parent.url (1) = {{ parent_page.url }}<br/>
+    parent.title (1) = {{ parent_page.title }}<br/>
   {% endif %}
-  parent.nav_order (2) = {{ page.parent.nav_order }}<br/>
-  parent.url (2) = {{ page.parent.url }}<br/>
-  parent.title (2) = {{ page.parent.title }}<br/>
-  parent.nav_order (3) = {{ child.parent.nav_order }}<br/>
-  parent.url (3) = {{ child.parent.url }}<br/>
-  parent.title (3) = {{ child.parent.title }}<br/>
   {% if child.parent == page.parent and  child.title == page.title %}
+    {% assign cur_page = child %}
     child.nav_order = {{ child.nav_order }}<br/>
     child.url = {{ child.url }}<br/>
     parent.nav_order = {{ parent_page_info.nav_order }}<br/>
     parent.url = {{ parent_page_info.url }}<br/>
     parent.title = {{ parent_page_info.title }}<br/>
     forloop.index = {{ forloop.index }}<br/>
-    {% unless forloop.first %}
-    prev_url = {{ children_list[forloop.index0 - 1].url }}<br/>
-    {% endunless %}
     url[current] = {{ children_list[forloop.index0].url }}<br/>
     title[current] = {{ children_list[forloop.index0].title }}<br/>
     <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>
   {% endif %}
 {% endfor %}
+parent.nav_order = {{ parent_page.nav_order }}<br/>
+parent.url = {{ parent_page.url }}<br/>
+parent.title = {{ parent_page.title }}<br/><br/>
+prev.nav_order = {{ prev_page.nav_order }}<br/>
+prev.url = {{ prev_page.url }}<br/>
+prev.title = {{ prev_page.title }}<br/><br/>
+cur.nav_order = {{ cur_page.nav_order }}<br/>
+cur.url = {{ cur_page.url }}<br/>
+cur.title = {{ cur_page.title }}<br/><br/>
+next.nav_order = {{ next_page.nav_order }}<br/>
+next.url = {{ next_page.url }}<br/>
+next.title = {{ next_page.title }}<br/><br/>
 <p><div align="center">&lt; Prev | <a href="{{ page.parent.url }}">Up</a> | <a href="main_statements.html">Next &gt;</a></div></p>
 
