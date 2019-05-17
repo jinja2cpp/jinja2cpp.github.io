@@ -71,7 +71,7 @@ jinja2::ValuesMap params {
     {"items", {"Dog", "Cat", "Monkey", "Elephant"}},
 };
 ```
-`jinja2::ValuesMap` is a data type which can hold associative collection of params. Each of this parameter can be accessed inside the template by it's name. 
+`jinja2::ValuesMap` is a data type which can hold associative collection of params. Each of this parameter can be accessed inside the template by it's name. The type of value can be not only string, but integer, float, boolean, array, another map or even reflected regular C++ type.
 
 And now, the template can be rendered:
 
@@ -82,4 +82,24 @@ std::cout << tpl.RenderAsString(params);
 ```
 And you will get on the console the conversion function mentioned above!
 
-You can call 'Render' method many times, with different parameters set, from several threads. Everything will be fine: every time you call 'Render' you will get the result depended only on provided params. Also you can render some part of template many times (for different parameters) with help of 'for' loop and 'extend' statement (described below). It allows you to iterate through the list of items from the first to the last one and render the loop body for each item respectively. In this particular sample it allows to put as many 'case' blocks in conversion function as many items in the 'reflected' enum.
+```c++
+inline const char* AnimalsToString(Animals e)
+{
+    switch (e)
+    {
+    case Dog:
+        return "Dog";
+    case Cat:
+        return "Cat";
+    case Monkey:
+        return "Monkey";
+    case Elephant:
+        return "Elephant";
+    }
+    return "Unknown Item";
+}
+```
+
+You can call 'Render' method many times, with different parameters set, from different threads simultaniously. Everything will be fine: every time you call 'Render' you will get the result depended only on provided params (or global settings taken from the `TemplateEnv`).
+
+<div align="center">[Up](../usage.html) | [Next >](main_statements.html)</div>
