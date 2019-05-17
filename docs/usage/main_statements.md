@@ -68,9 +68,6 @@ I.e. left part of this expression (before 'if') is a true-branch of the statemen
 
 {% assign children_list = site.pages | sort:"nav_order" %}
 {% for child in children_list %}
-  {% if child == page.parent %}
-  {% assign parent_page_info = child %}
-  {% endif %}
   {% if child.parent == page.parent and  child.title == page.title %}
     child.nav_order = {{ child.nav_order }}</br>
     child.url = {{ child.url }}</br>
