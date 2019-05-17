@@ -75,7 +75,7 @@ I.e. left part of this expression (before 'if') is a true-branch of the statemen
     {% assign next_page = child %}
     {% break %}
   {% endunless %}
-  {% assign current = cur_page %}
+  {% assign current = child %}
   {% if child.title == page.parent %}
     {% assign parent_page = child %}
     parent.nav_order (1) = {{ parent_page.nav_order }}<br/>
@@ -95,15 +95,19 @@ I.e. left part of this expression (before 'if') is a true-branch of the statemen
     <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>
   {% endif %}
 {% endfor %}
+parent.parent = {{ parent_page.parent }}<br/>
 parent.nav_order = {{ parent_page.nav_order }}<br/>
 parent.url = {{ parent_page.url }}<br/>
 parent.title = {{ parent_page.title }}<br/><br/>
+prev.parent = {{ prev_page.parent }}<br/>
 prev.nav_order = {{ prev_page.nav_order }}<br/>
 prev.url = {{ prev_page.url }}<br/>
 prev.title = {{ prev_page.title }}<br/><br/>
+cur.parent = {{ cur_page.parent }}<br/>
 cur.nav_order = {{ cur_page.nav_order }}<br/>
 cur.url = {{ cur_page.url }}<br/>
 cur.title = {{ cur_page.title }}<br/><br/>
+next.parent = {{ next_page.parent }}<br/>
 next.nav_order = {{ next_page.nav_order }}<br/>
 next.url = {{ next_page.url }}<br/>
 next.title = {{ next_page.title }}<br/><br/>
