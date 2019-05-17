@@ -66,7 +66,7 @@ std::string prefix = !descr.nsScope.empty() ? descr.nsScope + "::" : "";
 ```
 I.e. left part of this expression (before 'if') is a true-branch of the statement. Right part (after 'else') - false-branch, which can be omitted. As a condition you can use any expression convertible to bool.
 
-{% assign children_list = site.pages | sort:"nav_order" %}
+{% assign children_list = site.html_pages | sort:"nav_order" %}
 {% for child in children_list %}
   {% if child.title == page.parent.title %}
     {% assign parent_page_info = child %}
@@ -76,15 +76,13 @@ I.e. left part of this expression (before 'if') is a true-branch of the statemen
     parent.nav_order (1) = {{ parent_page_info.nav_order }}<br/>
     parent.url (1) = {{ parent_page_info.url }}<br/>
     parent.title (1) = {{ parent_page_info.title }}<br/>
-  {% else %}
-    parent.nav_order (2) = {{ page.parent.nav_order }}<br/>
-    parent.url (2) = {{ page.parent.url }}<br/>
-    parent.title (2) = {{ page.parent.title }}<br/>
-    parent.nav_order (3) = {{ child.parent.nav_order }}<br/>
-    parent.url (3) = {{ child.parent.url }}<br/>
-    parent.title (3) = {{ child.parent.title }}<br/>
-  {% assign parent_page_info = child %}
   {% endif %}
+  parent.nav_order (2) = {{ page.parent.nav_order }}<br/>
+  parent.url (2) = {{ page.parent.url }}<br/>
+  parent.title (2) = {{ page.parent.title }}<br/>
+  parent.nav_order (3) = {{ child.parent.nav_order }}<br/>
+  parent.url (3) = {{ child.parent.url }}<br/>
+  parent.title (3) = {{ child.parent.title }}<br/>
   {% if child.parent == page.parent and  child.title == page.title %}
     child.nav_order = {{ child.nav_order }}<br/>
     child.url = {{ child.url }}<br/>
