@@ -30,12 +30,10 @@ Usage of Jinja2C++ in the code is pretty simple:
 ```c++
 jinja2::Template tpl;
 ```
-3. Populate it with template:
-{% raw %}
+3. Populate it with template:{% raw %}
 ```c++
 tpl.Load("{{'Hello World' }}!!!");
-```
-{% endraw %}
+```{% endraw %}
 4. Render the template:
 ```c++
 std::cout << tpl.RenderAsString(jinja2::ValuesMap{}) << std::endl;
