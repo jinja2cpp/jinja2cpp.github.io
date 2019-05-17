@@ -66,5 +66,16 @@ std::string prefix = !descr.nsScope.empty() ? descr.nsScope + "::" : "";
 ```
 I.e. left part of this expression (before 'if') is a true-branch of the statement. Right part (after 'else') - false-branch, which can be omitted. As a condition you can use any expression convertible to bool.
 
+{% assign children_list = site.pages | sort:"nav_order" %}
+{% for child in children_list %}
+  {% if child.parent == page.parent and  child.title == page.title %}
+    child.nav_order = {{ child.nav_order }}
+    child.url = {{ child.url }}
+    loop.prev = {{ loop.prev }}
+    loop.next = {{ loop.prev }}
+    loop.index = {{ loop.prev }}
+    <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>
+  {% endif %}
+{% endfor %}
 <p><div align="center">&lt; Prev | <a href="{{ page.parent.url }}">Up</a> | <a href="main_statements.html">Next &gt;</a></div></p>
 
