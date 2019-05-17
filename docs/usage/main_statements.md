@@ -70,13 +70,16 @@ I.e. left part of this expression (before 'if') is a true-branch of the statemen
 {% for child in children_list %}
   {% if child.parent == page.parent and  child.title == page.title %}
     child.nav_order = {{ child.nav_order }}</br>
-    child.url = {{ child.url }}</br>
-    parent.nav_order = {{ parent.nav_order }}</br>
-    parent.url = {{ parent.url }}</br>
-    parent.title = {{ parent.title }}</br>
-    forloop.prev = {{ forloop.prev }}</br>
-    forloop.next = {{ forloop.prev }}</br>
-    forloop.index = {{ forloop.prev }}</br>
+    child.url = {{ child.url }}<br/>
+    parent.nav_order = {{ parent.nav_order }}<br/>
+    parent.url = {{ parent.url }}<br/>
+    parent.title = {{ parent.title }}<br/>
+    forloop.prev = {{ forloop.prev }}<br/>
+    forloop.next = {{ forloop.next }}<br/>
+    forloop.index = {{ forloop.index }}<br/>
+    {% unless forloop.first %}
+    prev_url = {{ children_list[forloop.index0 - 1].url }}<br/>
+    {% endunless %}
     <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>
   {% endif %}
 {% endfor %}
