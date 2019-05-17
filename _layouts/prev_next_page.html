@@ -25,33 +25,8 @@ layout: default
   {% endif %}
   {% if child.parent == page.parent and  child.title == page.title %}
     {% assign cur_page = child %}
-    child.nav_order = {{ child.nav_order }}<br/>
-    child.url = {{ child.url }}<br/>
-    parent.nav_order = {{ parent_page_info.nav_order }}<br/>
-    parent.url = {{ parent_page_info.url }}<br/>
-    parent.title = {{ parent_page_info.title }}<br/>
-    forloop.index = {{ forloop.index }}<br/>
-    url[current] = {{ children_list[forloop.index0].url }}<br/>
-    title[current] = {{ children_list[forloop.index0].title }}<br/>
-    <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>
   {% endif %}
 {% endfor %}
-parent.parent = {{ parent_page.parent }}<br/>
-parent.nav_order = {{ parent_page.nav_order }}<br/>
-parent.url = {{ parent_page.url }}<br/>
-parent.title = {{ parent_page.title }}<br/><br/>
-prev.parent = {{ prev_page.parent }}<br/>
-prev.nav_order = {{ prev_page.nav_order }}<br/>
-prev.url = {{ prev_page.url }}<br/>
-prev.title = {{ prev_page.title }}<br/><br/>
-cur.parent = {{ cur_page.parent }}<br/>
-cur.nav_order = {{ cur_page.nav_order }}<br/>
-cur.url = {{ cur_page.url }}<br/>
-cur.title = {{ cur_page.title }}<br/><br/>
-next.parent = {{ next_page.parent }}<br/>
-next.nav_order = {{ next_page.nav_order }}<br/>
-next.url = {{ next_page.url }}<br/>
-next.title = {{ next_page.title }}<br/><br/>
 <p><div align="center">
 {% if prev_page != nil and prev_page.parent == page.parent %}
     <a href="{{ prev_page.url | absolute_url }}">&lt; Prev</a>
