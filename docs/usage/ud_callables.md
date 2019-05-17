@@ -1,11 +1,11 @@
 ---
-layout: default
+layout: prev_next_page
 title: User-defined Callables
-parent: Jinja2Cpp Usage
+parent: Jinja2C++ Usage
 nav_order: 6
 ---
 
-## User-defined callables
+# User-defined callables
 
 Not only C++ types can be reflected into Jinja2 template context, but the functions (and lambdas, and any other callable objects) as well. These refelected callable objects are called 'user-defined callables' and can be accessed from Jinja2 templates in the same manner as any other callables (like macros or global functions). In order to reflect callable object into Jinja2 context the `jinja2::MakeCallable` method should be used:
 
