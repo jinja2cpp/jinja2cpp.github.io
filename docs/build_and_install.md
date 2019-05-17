@@ -68,7 +68,8 @@ Jinja2Cpp can be used as conan.io package. In this case you should do the follow
     - https://api.bintray.com/conan/martinmoene/nonstd-lite
     - https://api.bintray.com/conan/bincrafters/public-conan
     - https://api.bintray.com/conan/manu343726/conan-packages
-The sample command is: `conan remote add martin https://api.bintray.com/conan/martinmoene/nonstd-lite`
+    
+    The sample command is: `conan remote add martin https://api.bintray.com/conan/martinmoene/nonstd-lite`    
 3. Add reference to Jinja2Cpp package (`jinja2cpp/0.9.1@Manu343726/testing`) to your conanfile.txt, conanfile.py or CMakeLists.txt. For instance, with usage of `conan-cmake` integration it could be written this way:
 
 ```cmake
