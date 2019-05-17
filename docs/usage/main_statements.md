@@ -68,7 +68,7 @@ I.e. left part of this expression (before 'if') is a true-branch of the statemen
 
 {% assign children_list = site.html_pages | sort:"nav_order" %}
 {% for child in children_list %}
-  {% unless forloop.first %}
+  {% unless forloop.first or current.parent != page.parent %}
     {% if cur_page == nil %}
         {% assign prev_page = current %}
     {% endif %}
