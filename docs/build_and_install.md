@@ -36,19 +36,19 @@ In order to compile Jinja2C++ you need:
 1. Install CMake build system (at least version 3.0)
 2. Clone jinja2cpp repository and update submodules:
 ```
-> git clone https://github.com/flexferrum/Jinja2Cpp.git
+> git clone https://github.com/jinja2cpp/Jinja2Cpp.git
+> cd Jinja2Cpp
 > git submodule -q update --init
 ```
 3. Create build directory:
 ```
-> cd Jinja2Cpp
-> mkdir build
+> mkdir .build
 ```
 4. Run CMake and build the library:
 ```
-> cd build
+> cd .build
 > cmake .. -DCMAKE_INSTALL_PREFIX=<path to install folder>
-> cmake --build . --target all
+> cmake --build . --target install
 ```
 "Path to install folder" here is a path to the folder where you want to install Jinja2Cpp lib.
 5. Install library:
@@ -61,7 +61,7 @@ In order to compile Jinja2C++ you need:
 ```
 
 ### Use with conan.io dependency manager
-Jinja2Cpp can be used as conan.io package. In this case you should do the following steps:
+Jinja2C++ can be used as conan.io package. In this case you should do the following steps:
 
 1. Install conan.io according to the documentation ( https://docs.conan.io/en/latest/installation.html )
 2. Register the following remote conan.io repositories:
@@ -70,7 +70,7 @@ Jinja2Cpp can be used as conan.io package. In this case you should do the follow
     - https://api.bintray.com/conan/manu343726/conan-packages
     
     The sample command is: `conan remote add martin https://api.bintray.com/conan/martinmoene/nonstd-lite`    
-3. Add reference to Jinja2Cpp package (`jinja2cpp/0.9.1@Manu343726/testing`) to your conanfile.txt, conanfile.py or CMakeLists.txt. For instance, with usage of `conan-cmake` integration it could be written this way:
+3. Add reference to Jinja2C++ package (`jinja2cpp/0.9.1@Manu343726/testing`) to your conanfile.txt, conanfile.py or CMakeLists.txt. For instance, with usage of `conan-cmake` integration it could be written this way:
 
 ```cmake
 include (../../cmake/conan.cmake)
@@ -102,25 +102,25 @@ set_target_properties (${TARGET_NAME} PROPERTIES
 ### Additional CMake build flags
 You can define (via -D command line CMake option) the following build flags:
 
--  **JINJA2CPP_BUILD_TESTS** (default TRUE) - to build or not to Jinja2Cpp tests.
+-  **JINJA2CPP_BUILD_TESTS** (default TRUE) - to build or not to Jinja2C++ tests.
 -  **JINJA2CPP_STRICT_WARNINGS** (default TRUE) - Enable strict mode compile-warnings(-Wall -Werror and etc).
--  **JINJA2CPP_BUILD_SHARED** (default OFF) - Specify Jinja2Cpp library library link type.
+-  **JINJA2CPP_BUILD_SHARED** (default OFF) - Specify Jinja2C++ library library link type.
 -  **MSVC_RUNTIME_TYPE** (default /MD) - MSVC runtime type to link with (if you use Microsoft Visual Studio compiler).
 -  **JINJA2CPP_DEPS_MODE** (default "internal") - modes for dependencies handling. Following values possible:
-    -  `internal` In this mode Jinja2Cpp build script uses dependencies (include `boost`) shipped as subprojects. Nothing needs to be provided externally.
-    -  `external-boost` In this mode Jinja2Cpp build script uses only `boost` as externally-provided dependency. All other dependencies taken from subprojects.
+    -  `internal` In this mode Jinja2C++ build script uses dependencies (include `boost`) shipped as subprojects. Nothing needs to be provided externally.
+    -  `external-boost` In this mode Jinja2C++ build script uses only `boost` as externally-provided dependency. All other dependencies taken from subprojects.
     -  `external` In this mode all dependencies should be provided externally. Paths to `boost`, `nonstd-*` libs etc. should be specified via standard CMake variables (like `CMAKE_PREFIX_PATH` or libname_DIR)
-    -  `conan-build` Special mode for building Jinja2Cpp via conan recipe.
+    -  `conan-build` Special mode for building Jinja2C++ via conan recipe.
     
 ## Dependency management modes
 TODO:
 
 ## Link with you projects
-Jinja2Cpp is shipped with cmake finder script. So you can:
+Jinja2C++ is shipped with cmake finder scripts. So you can:
 
-1. Include Jinja2Cpp cmake scripts to the project:
+1. Include Jinja2C++ cmake scripts to the project:
 ```cmake
-list (APPEND CMAKE_MODULE_PATH ${JINJA2CPP_INSTALL_DIR}/cmake)
+list (APPEND CMAKE_MODULE_PATH ${JINJA2CPP_INSTALL_DIR}/lib/jinja2cpp)
 ```
 2. Use regular 'find' script:
 ```cmake
