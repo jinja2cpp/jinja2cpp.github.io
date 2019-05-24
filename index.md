@@ -27,6 +27,7 @@ Jinja2C++ is a modern C++ implementation of the [Python Jinja2 template engine](
 - Powerful full-featured Jinja2 expressions with filtering (via '\|' operator) and 'if'-expressions.
 - Control flow statements ('set', 'for', 'if').
 - Templates extention ('extends', 'block').
+- Templates reuse ('include', 'import', 'from')
 - Macros ('macro', 'call').
 - Rich error reporting.
 
