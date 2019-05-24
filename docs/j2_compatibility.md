@@ -15,7 +15,7 @@ Currently, Jinja2C++ supports the limited number of Jinja2 features. By the way,
 - 'set' statement
 - 'extends'/'block' statements
 - 'include' statement
-- 'import'/'from' statement
+- 'import'/'from' statements
 - 'macro'/'call' statements
 - recursive loops
 - space control
