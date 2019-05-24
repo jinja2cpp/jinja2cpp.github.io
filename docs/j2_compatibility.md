@@ -12,9 +12,10 @@ Currently, Jinja2Cpp supports the limited number of Jinja2 features. By the way,
 - limited number of functions (**range**, **loop.cycle**)
 - 'if' statement (with 'elif' and 'else' branches)
 - 'for' statement (with 'else' branch and 'if' part support)
-- 'extends' statement
 - 'set' statement
 - 'extends'/'block' statements
+- 'include' statement
+- 'import'/'from' statement
 - 'macro'/'call' statements
 - recursive loops
 - space control
