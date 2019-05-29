@@ -32,7 +32,7 @@ Currently, Jinja2C++ supports the limited number of Jinja2 features. By the way,
 - space control
 
 **Jinja2 specifiecation implementation notes**:
-- Wrong precedence of '|' (pipe) operator (see (#47)[https://github.com/jinja2cpp/Jinja2Cpp/issues/47]
+- Wrong precedence of '\|' (pipe) operator (see (#47)[https://github.com/jinja2cpp/Jinja2Cpp/issues/47]
 - Block 'set' statement version doesn't implemented
 
 ## Comparison with like types
