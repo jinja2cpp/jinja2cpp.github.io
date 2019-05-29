@@ -36,7 +36,9 @@ Currently, Jinja2C++ supports the limited number of Jinja2 features. By the way,
 - Block 'set' statement version doesn't implemented
 
 ## Comparison with other implementations
-|Feature                     |Jinja2CppLight|pantor::inja   |Python Jinja2  |
+
+Feature                     |Jinja2CppLight|pantor::inja   |Python Jinja2
+
 
 ### References
 
