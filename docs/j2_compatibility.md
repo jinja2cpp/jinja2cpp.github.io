@@ -38,6 +38,10 @@ Currently, Jinja2C++ supports the limited number of Jinja2 features. By the way,
 ## Comparison with other implementations
 
 Feature                     |Jinja2CppLight|pantor::inja   |Python Jinja2
+----------------------------|--------------|---------------|---------------
+More information            | see 1        | see  2        | see  3        
+
+
 
 
 ### References
