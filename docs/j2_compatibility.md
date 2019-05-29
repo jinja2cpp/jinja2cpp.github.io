@@ -35,12 +35,13 @@ Currently, Jinja2C++ supports the limited number of Jinja2 features. By the way,
 - Wrong precedence of '\|' (pipe) operator (see [#47](https://github.com/jinja2cpp/Jinja2Cpp/issues/47) )
 - Block 'set' statement version doesn't implemented
 
-## Comparison with like types
+## Comparison with other implementations
 |Feature                     |Jinja2CppLight|pantor::inja   |Python Jinja2  |
 |----------------------------|--------------|---------------|---------------|
 |More information            | see [1]      | see [2]       | see [3]       |
 |                            |              |               |               |
 | {% raw %}{{/}}{% endraw %} | yes          | yes           | yes           |
+
 
 ### References
 
