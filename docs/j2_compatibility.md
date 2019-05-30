@@ -49,7 +49,7 @@ set                           | <span style="color:green">yes</span>     | <span
 block set                     | <span style="color:red">no</span>        | <span style="color:red">no</span>             | <span style="color:red">no</span>              | <span style="color:green">yes</span>
 if / endif                    | <span style="color:green">yes</span>     | <span style="color:green">yes</span>          | <span style="color:green">yes</span>           | <span style="color:green">yes</span>
 else                          | <span style="color:green">yes</span>     | <span style="color:red">no</span>             | <span style="color:green">yes</span>           | <span style="color:green">yes</span>
-elif                          | <span style="color:green">yes</span>     | <span style="color:green">yes</span>          | <span style="color:green">yes</span>           | <span style="color:green">yes</span>
+elif                          | <span style="color:green">yes</span>     | <span style="color:red">no</span>             | <span style="color:red">no</span>              | <span style="color:green">yes</span>
 for / endfor                  | <span style="color:green">yes</span>     | <span style="color:green">yes</span>          | <span style="color:green">yes</span>           | <span style="color:green">yes</span>
 recursive for loop            | <span style="color:green">yes</span>     | <span style="color:red">no</span>             | <span style="color:red">no</span>              | <span style="color:green">yes</span>
 conditional for loop          | <span style="color:green">yes</span>     | <span style="color:red">no</span>             | <span style="color:red">no</span>              | <span style="color:green">yes</span>
