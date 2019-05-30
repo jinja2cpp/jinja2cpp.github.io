@@ -43,7 +43,7 @@ More information              |                                          | see [
  {% raw %}{{ / }}{% endraw %} | <span style="color:green">yes</span>     | <span style="color:green">yes</span>          | <span style="color:green">yes</span>           | <span style="color:green">yes</span>           
  {% raw %}{% / %}{% endraw %} | <span style="color:green">yes</span>     | <span style="color:green">yes</span>          | <span style="color:green">yes</span>           | <span style="color:green">yes</span>           
  {% raw %}{# / #}{% endraw %} | <span style="color:green">yes</span>     | <span style="color:green">yes</span>          | <span style="color:green">yes</span>           | <span style="color:green">yes</span>           
- Single-line statements       | <span style="color:red">no</span>        | <span style="color:red">yes</span>            | <span style="color:green">yes</span>           | <span style="color:green">yes</span>           
+ Single-line statements       | <span style="color:red">no</span>        | <span style="color:red">no</span>             | <span style="color:green">yes</span>           | <span style="color:green">yes</span>           
 
 
 
