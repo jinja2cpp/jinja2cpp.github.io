@@ -80,3 +80,8 @@ This template uses two significant jinja2 template features:
 std::string prefix = !descr.nsScope.empty() ? descr.nsScope + "::" : "";
 ```
 I.e. left part of this expression (before 'if') is a true-branch of the statement. Right part (after 'else') - false-branch, which can be omitted. As a condition you can use any expression convertible to bool.
+
+## 'with' statement
+
+TODO:
+
