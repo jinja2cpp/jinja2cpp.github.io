@@ -2,7 +2,7 @@
 layout: prev_next_page
 title: Error Reporting
 parent: Jinja2C++ Usage
-nav_order: 7
+nav_order: 8
 ---
 
 # Error reporting
