@@ -1,7 +1,7 @@
 ---
 layout: prev_next_page
 title: Reflection
-parent: JinjaC++ Usage
+parent: Jinja2C++ Usage
 nav_order: 6
 ---
 
