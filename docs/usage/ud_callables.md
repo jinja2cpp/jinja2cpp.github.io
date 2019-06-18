@@ -2,7 +2,7 @@
 layout: prev_next_page
 title: User-defined Callables
 parent: Jinja2C++ Usage
-nav_order: 6
+nav_order: 7
 ---
 
 # User-defined callables
