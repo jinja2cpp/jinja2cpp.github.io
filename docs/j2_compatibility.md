@@ -54,24 +54,23 @@ for / endfor                  | <span style="color:green">yes</span>     | <span
 recursive for loop            | <span style="color:green">yes</span>     | <span style="color:red">no</span>             | <span style="color:red">no</span>              | <span style="color:green">yes</span>
 conditional for loop          | <span style="color:green">yes</span>     | <span style="color:red">no</span>             | <span style="color:red">no</span>              | <span style="color:green">yes</span>
 
+### References
+
+- [1]
+- [2]
+- [3]
 
 ## Jinja2C++ performance
 
  Template                                                                                           | Python    | Jinja2C++ (MSVC build) | Jinja2C++ (MinGW Build) 
 ----------------------------------------------------------------------------------------------------|-----------|------------------------|-------------------------
  'Hello World from Parser!' (1 mln. iterations)                                                     | 4.333 sec | 1.883 sec              | 0.831 sec               
- '{{ message }} from Parser!' message='Hello World!' (1 mln. iterations)                            | 5.083     | 2.188                  | 1.082                   
- '{{ message }} from Parser!' message=100500 (1 mln. iterations)                                    | 5.126     | 2.211                  | 1.087                   
- '{{ message | upper }} from Parser!'  message='Hello World!' (1 mln. iterations)                   | 5.583     | 3.559                  | 1.850                   
- '{{ message }} from Parser! - {{number}}' message='Hello World!', number=100500 (1 mln. iterations)| 5.800     | 2.594                  | 1.504                   
- '{% for i in range(20)%} {{i}} {%endfor%}' (20 thsd. iterations)                                   | 2.485     | 2.917                  | 1.966                   
- '{% for i in range(num)%} {{i}} {%endfor%}' num=20 (20 thsd. iterations)                           | 2.575     | 2.768                  | 2.040                   
- '{% for i in range(20)%} {{i ~ "-" ~ loop.index}} {%endfor%}' (20 thsd. iterations)                | 11.720    | 6.334                  | 4.340                   
- '{% for i in range(20) if i is odd %} {{i}} {%endfor%}' (20 thsd. iterations)                      | 2.620     | 3.710                  | 2.733                   
+ `{% raw %}{{ message }} from Parser!' message='Hello World!{% endraw %}` (1 mln. iterations)                            | 5.083     | 2.188                  | 1.082                   
+ `{% raw %}{{ message }} from Parser!{% endraw %}` message=100500 (1 mln. iterations)                                    | 5.126     | 2.211                  | 1.087                   
+ `{% raw %}{{ message | upper }} from Parser!{% endraw %}`  message='Hello World!' (1 mln. iterations)                   | 5.583     | 3.559                  | 1.850                   
+ `{% raw %}{{ message }} from Parser! - {{number}}{% endraw %}` message='Hello World!', number=100500 (1 mln. iterations)| 5.800     | 2.594                  | 1.504                   
+ `{% raw %}{% for i in range(20)%} {{i}} {%endfor%}{% endraw %}` (20 thsd. iterations)                                   | 2.485     | 2.917                  | 1.966                   
+ `{% raw %}{% for i in range(num)%} {{i}} {%endfor%}{% endraw %}` num=20 (20 thsd. iterations)                           | 2.575     | 2.768                  | 2.040                   
+ `{% raw %}{% for i in range(20)%} {{i ~ "-" ~ loop.index}} {%endfor%}{% endraw %}` (20 thsd. iterations)                | 11.720    | 6.334                  | 4.340                   
+ `{% raw %}{% for i in range(20) if i is odd %} {{i}} {%endfor%}{% endraw %}` (20 thsd. iterations)                      | 2.620     | 3.710                  | 2.733                   
 
-
-### References
-
-- [1]
-- [2]
-- [3]
