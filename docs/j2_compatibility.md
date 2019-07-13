@@ -64,7 +64,7 @@ conditional for loop          | <span style="color:green">yes</span>     | <span
 
  Template                                                                                           | Python    | Jinja2C++ (MSVC build) | Jinja2C++ (MinGW Build) 
 ----------------------------------------------------------------------------------------------------|-----------|------------------------|-------------------------
- 'Hello World from Parser!' (1 mln. iterations)                                                     | 4.333 sec | 1.883 sec              | 0.831 sec               
+ `Hello World from Parser!` (1 mln. iterations)                                                     | 4.333 sec | 1.883 sec              | 0.831 sec               
  `{% raw %}{{ message }} from Parser!' message='Hello World!{% endraw %}` (1 mln. iterations)                            | 5.083     | 2.188                  | 1.082                   
  `{% raw %}{{ message }} from Parser!{% endraw %}` message=100500 (1 mln. iterations)                                    | 5.126     | 2.211                  | 1.087                   
  `{% raw %}{{ message | upper }} from Parser!{% endraw %}`  message='Hello World!' (1 mln. iterations)                   | 5.583     | 3.559                  | 1.850                   
