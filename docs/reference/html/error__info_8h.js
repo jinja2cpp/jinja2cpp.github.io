@@ -1,0 +1,38 @@
+var error__info_8h =
+[
+    [ "SourceLocation", "structjinja2_1_1_source_location.html", "structjinja2_1_1_source_location" ],
+    [ "ErrorInfoTpl", "classjinja2_1_1_error_info_tpl.html", "classjinja2_1_1_error_info_tpl" ],
+    [ "Data", "structjinja2_1_1_error_info_tpl_1_1_data.html", "structjinja2_1_1_error_info_tpl_1_1_data" ],
+    [ "ErrorInfo", "error__info_8h.html#a5d5d2f1a492185f50964443fa868d828", null ],
+    [ "ErrorInfoW", "error__info_8h.html#ae9958e81495c6814880e7ffc14e79960", null ],
+    [ "ErrorCode", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1", [
+      [ "Unspecified", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a6fcdc090caeade09d0efd6253932b6f5", null ],
+      [ "UnexpectedException", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a04f57c1b5fdbae26f48113cda5cc200b", null ],
+      [ "YetUnsupported", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a455fa178adfd1878fc4b82c5ec8d43b2", null ],
+      [ "FileNotFound", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a2767828026039e8ba7b38973cbb701f2", null ],
+      [ "ExpectedStringLiteral", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1add5091e8fb840be29186cd741913b569", null ],
+      [ "ExpectedIdentifier", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1ac65be8a068925d8e409c21e1485fe82c", null ],
+      [ "ExpectedSquareBracket", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a18fb41c60916c0e6c0f4ccc648660665", null ],
+      [ "ExpectedRoundBracket", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1ad9e348b2386fbbe95a55dcf0a49fd36b", null ],
+      [ "ExpectedCurlyBracket", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1ac134429d21e3bf6e958aa471444916a2", null ],
+      [ "ExpectedToken", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a65c2fad2a290d73bea828b91824b9586", null ],
+      [ "ExpectedExpression", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1ac08414e5939ae3fa8517ea7e7a4f3bfa", null ],
+      [ "ExpectedEndOfStatement", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a5ae5d20902123dc49a97e0a1ca5a56bd", null ],
+      [ "UnexpectedToken", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1ac2a1728fb6705d558a76b01827e56356", null ],
+      [ "UnexpectedStatement", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a5aadd52bc26feda8bc189e5b04348994", null ],
+      [ "UnexpectedCommentBegin", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a1162f79ca6ebec3755e1c92290ed07f3", null ],
+      [ "UnexpectedCommentEnd", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a22c183e11529f8950bfa874d064a0f83", null ],
+      [ "UnexpectedExprBegin", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1ae6b6f07d2b1139249e1b6e7a1f1542ef", null ],
+      [ "UnexpectedExprEnd", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a7c9937861c16b4d034d74e82ff7f43a9", null ],
+      [ "UnexpectedStmtBegin", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a3f204b3d5e06af25ddf2c04a4fc440ab", null ],
+      [ "UnexpectedStmtEnd", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1aa33bf8c90947ad187e726c2ee7b73938", null ],
+      [ "TemplateNotFound", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1ac8b92189652e748e7ef7bdca13f0358e", null ],
+      [ "TemplateNotParsed", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1abd64ca5c860d0880aca3a148a57ac1ee", null ],
+      [ "InvalidValueType", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a4aff26a4cf7597ae1db7983914d5539d", null ],
+      [ "InvalidTemplateName", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a97d681f584b1cd6fae08e2339fb571c8", null ],
+      [ "ExtensionDisabled", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a72f6ba2ac5bf94128007f06d179fc02c", null ],
+      [ "TemplateEnvAbsent", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a1453066137406b4d0b8c54e8d5695daf", null ]
+    ] ],
+    [ "operator<<", "error__info_8h.html#ae4f3765040b9fdeb60acaa79fe35b9c8", null ],
+    [ "operator<<", "error__info_8h.html#ae963095e251f54ea002309b21965ef8e", null ]
+];
