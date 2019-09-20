@@ -102,6 +102,9 @@ $(document).ready(function(){initNavTree('classjinja2_1_1_real_file_system.html'
 </div><!--header-->
 <div class="contents">
 
+<p>Filesystem handler for files stored on the filesystem.  
+ <a href="classjinja2_1_1_real_file_system.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="filesystem__handler_8h_source.html">filesystem_handler.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for jinja2::RealFileSystem:</div>
@@ -109,30 +112,53 @@ Inheritance diagram for jinja2::RealFileSystem:</div>
  <div class="center">
   <img src="classjinja2_1_1_real_file_system.png" usemap="#jinja2::RealFileSystem_map" alt=""/>
   <map id="jinja2::RealFileSystem_map" name="jinja2::RealFileSystem_map">
-<area href="classjinja2_1_1_i_filesystem_handler.html" alt="jinja2::IFilesystemHandler" shape="rect" coords="0,0,155,24"/>
+<area href="classjinja2_1_1_i_filesystem_handler.html" title="Generic interface to filesystem handlers (loaders)" alt="jinja2::IFilesystemHandler" shape="rect" coords="0,0,155,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab899b30e63953fe4986ea6eed4a9154f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_real_file_system.html#ab899b30e63953fe4986ea6eed4a9154f">RealFileSystem</a> (std::string rootFolder=&quot;.&quot;)</td></tr>
+<tr class="memdesc:ab899b30e63953fe4986ea6eed4a9154f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializing/default constructor.  <a href="classjinja2_1_1_real_file_system.html#ab899b30e63953fe4986ea6eed4a9154f">More...</a><br /></td></tr>
 <tr class="separator:ab899b30e63953fe4986ea6eed4a9154f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f0cc85c4b789461985384d11459e651"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_real_file_system.html#a9f0cc85c4b789461985384d11459e651">SetRootFolder</a> (std::string newRoot)</td></tr>
+<tr class="memdesc:a9f0cc85c4b789461985384d11459e651"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset path to the root folder to the new value.  <a href="classjinja2_1_1_real_file_system.html#a9f0cc85c4b789461985384d11459e651">More...</a><br /></td></tr>
 <tr class="separator:a9f0cc85c4b789461985384d11459e651"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad288eb3c219e1eb87b2739226b234247"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_real_file_system.html#ad288eb3c219e1eb87b2739226b234247">GetRootFolder</a> () const</td></tr>
+<tr class="memdesc:ad288eb3c219e1eb87b2739226b234247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get path to the current root folder.  <a href="classjinja2_1_1_real_file_system.html#ad288eb3c219e1eb87b2739226b234247">More...</a><br /></td></tr>
+<tr class="separator:ad288eb3c219e1eb87b2739226b234247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a751cc72eebbcdb274a18ff268b2c69cf"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_real_file_system.html#a751cc72eebbcdb274a18ff268b2c69cf">GetFullFilePath</a> (const std::string &amp;name) const</td></tr>
+<tr class="memdesc:a751cc72eebbcdb274a18ff268b2c69cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get full path to the specified file.  <a href="classjinja2_1_1_real_file_system.html#a751cc72eebbcdb274a18ff268b2c69cf">More...</a><br /></td></tr>
+<tr class="separator:a751cc72eebbcdb274a18ff268b2c69cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa92284a328d2adfa13ef05049862b284"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacejinja2.html#ab5d363d70df829219a7b5652328977c6">CharFileStreamPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_real_file_system.html#aa92284a328d2adfa13ef05049862b284">OpenStream</a> (const std::string &amp;name) const override</td></tr>
+<tr class="memdesc:aa92284a328d2adfa13ef05049862b284"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method is called to open the file with the specified name in 'narrow-char' mode.  <a href="classjinja2_1_1_real_file_system.html#aa92284a328d2adfa13ef05049862b284">More...</a><br /></td></tr>
 <tr class="separator:aa92284a328d2adfa13ef05049862b284"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae463b6ab90e75c2bd5f540347ff91f9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacejinja2.html#ad07d25b586e095c48d73b504a49d4697">WCharFileStreamPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_real_file_system.html#ae463b6ab90e75c2bd5f540347ff91f9f">OpenWStream</a> (const std::string &amp;name) const override</td></tr>
+<tr class="memdesc:ae463b6ab90e75c2bd5f540347ff91f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method is called to open the file with the specified name in 'wide-char' mode.  <a href="classjinja2_1_1_real_file_system.html#ae463b6ab90e75c2bd5f540347ff91f9f">More...</a><br /></td></tr>
 <tr class="separator:ae463b6ab90e75c2bd5f540347ff91f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a238060f1c2188986766f08f470ef55a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacejinja2.html#ab5d363d70df829219a7b5652328977c6">CharFileStreamPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_real_file_system.html#a238060f1c2188986766f08f470ef55a3">OpenByteStream</a> (const std::string &amp;name) const</td></tr>
+<tr class="memdesc:a238060f1c2188986766f08f470ef55a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open the specified file as a binary stream.  <a href="classjinja2_1_1_real_file_system.html#a238060f1c2188986766f08f470ef55a3">More...</a><br /></td></tr>
+<tr class="separator:a238060f1c2188986766f08f470ef55a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c0ceaf6dbc6dd19875107431f77e528"><td class="memItemLeft" align="right" valign="top">nonstd::optional&lt; std::chrono::system_clock::time_point &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_real_file_system.html#a5c0ceaf6dbc6dd19875107431f77e528">GetLastModificationDate</a> (const std::string &amp;name) const override</td></tr>
+<tr class="memdesc:a5c0ceaf6dbc6dd19875107431f77e528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method is called to obtain the modification date of the specified file (if applicable)  <a href="classjinja2_1_1_real_file_system.html#a5c0ceaf6dbc6dd19875107431f77e528">More...</a><br /></td></tr>
+<tr class="separator:a5c0ceaf6dbc6dd19875107431f77e528"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classjinja2_1_1_i_filesystem_handler"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classjinja2_1_1_i_filesystem_handler')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classjinja2_1_1_i_filesystem_handler.html">jinja2::IFilesystemHandler</a></td></tr>
 <tr class="memitem:af1e98b85bed16d51148d42d64fb07e40 inherit pub_methods_classjinja2_1_1_i_filesystem_handler"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_i_filesystem_handler.html#af1e98b85bed16d51148d42d64fb07e40">~IFilesystemHandler</a> ()=default</td></tr>
+<tr class="memdesc:af1e98b85bed16d51148d42d64fb07e40 inherit pub_methods_classjinja2_1_1_i_filesystem_handler"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classjinja2_1_1_i_filesystem_handler.html#af1e98b85bed16d51148d42d64fb07e40">More...</a><br /></td></tr>
 <tr class="separator:af1e98b85bed16d51148d42d64fb07e40 inherit pub_methods_classjinja2_1_1_i_filesystem_handler"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Filesystem handler for files stored on the filesystem. </p>
+<p>This filesystem handler is an interface to the real file system. Root directory for file name mapping provided as a constructor argument. Each name (path) of the file to open is appended to the root directory path and then passed to the stream open methods. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab899b30e63953fe4986ea6eed4a9154f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab899b30e63953fe4986ea6eed4a9154f">&#9670;&nbsp;</a></span>RealFileSystem()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">jinja2::RealFileSystem::RealFileSystem </td>
@@ -142,11 +168,146 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Initializing/default constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rootFolder</td><td>Path to the root folder. This path is used as a root for every opened file </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a751cc72eebbcdb274a18ff268b2c69cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a751cc72eebbcdb274a18ff268b2c69cf">&#9670;&nbsp;</a></span>GetFullFilePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string jinja2::RealFileSystem::GetFullFilePath </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get full path to the specified file. </p>
+<p>Appends specified name of the file to the current root folder and returns it</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the file to get path to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Full path to the file </dd></dl>
+
+</div>
+</div>
+<a id="a5c0ceaf6dbc6dd19875107431f77e528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c0ceaf6dbc6dd19875107431f77e528">&#9670;&nbsp;</a></span>GetLastModificationDate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nonstd::optional&lt;std::chrono::system_clock::time_point&gt; jinja2::RealFileSystem::GetLastModificationDate </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method is called to obtain the modification date of the specified file (if applicable) </p>
+<p>If the underlaying filesystem supports retrival of the last modification date of the file this method should return this date when called. In other case it should return the empty optional object. Main purpose of this method is to help templates loader to determine the necessity of cached template reload</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the file to get the last modification date </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Last modification date (if applicable) or empty optional object otherwise </dd></dl>
+
+<p>Implements <a class="el" href="classjinja2_1_1_i_filesystem_handler.html#a9bceaeb724626d1f9055e5be8ee5cc9f">jinja2::IFilesystemHandler</a>.</p>
+
+</div>
+</div>
+<a id="ad288eb3c219e1eb87b2739226b234247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad288eb3c219e1eb87b2739226b234247">&#9670;&nbsp;</a></span>GetRootFolder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; jinja2::RealFileSystem::GetRootFolder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get path to the current root folder. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a238060f1c2188986766f08f470ef55a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a238060f1c2188986766f08f470ef55a3">&#9670;&nbsp;</a></span>OpenByteStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacejinja2.html#ab5d363d70df829219a7b5652328977c6">CharFileStreamPtr</a> jinja2::RealFileSystem::OpenByteStream </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open the specified file as a binary stream. </p>
+<p>Opens the specified file in the binary mode (instead of text).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the file to get the last modification date </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Last modification date (if applicable) or empty optional object otherwise </dd></dl>
+
+</div>
+</div>
 <a id="aa92284a328d2adfa13ef05049862b284"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa92284a328d2adfa13ef05049862b284">&#9670;&nbsp;</a></span>OpenStream()</h2>
 
@@ -170,6 +331,16 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Method is called to open the file with the specified name in 'narrow-char' mode. </p>
+<p>Method should return unique pointer to the std::istream object with custom deleter (<a class="el" href="namespacejinja2.html#ab5d363d70df829219a7b5652328977c6">CharFileStreamPtr</a>) . Deleter should properly delete pointee stream object.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the file to open </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Opened stream object or empty pointer in case of any error </dd></dl>
 
 <p>Implements <a class="el" href="classjinja2_1_1_i_filesystem_handler.html#ab20beae340570f352193bd12819d8efd">jinja2::IFilesystemHandler</a>.</p>
 
@@ -199,6 +370,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Method is called to open the file with the specified name in 'wide-char' mode. </p>
+<p>Method should return unique pointer to the std::wistream object with custom deleter (<a class="el" href="namespacejinja2.html#ad07d25b586e095c48d73b504a49d4697">WCharFileStreamPtr</a>) . Deleter should properly delete pointee stream object.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the file to open </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Opened stream object or empty pointer in case of any error </dd></dl>
+
 <p>Implements <a class="el" href="classjinja2_1_1_i_filesystem_handler.html#a76b088ac5bcff7ecd673b45ef59906cb">jinja2::IFilesystemHandler</a>.</p>
 
 </div>
@@ -226,6 +407,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reset path to the root folder to the new value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newRoot</td><td>New path to the root folder </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

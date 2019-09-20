@@ -96,6 +96,7 @@ $(document).ready(function(){initNavTree('classjinja2_1_1_template_env.html','')
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classjinja2_1_1_template_env-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -108,6 +109,13 @@ $(document).ready(function(){initNavTree('classjinja2_1_1_template_env.html','')
 
 <p><code>#include &lt;<a class="el" href="template__env_8h_source.html">template_env.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ac4fcf8dab9047d57154a2ec485547c27"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_template_env.html#ac4fcf8dab9047d57154a2ec485547c27">TimePoint</a> = std::chrono::system_clock::time_point</td></tr>
+<tr class="separator:ac4fcf8dab9047d57154a2ec485547c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79ddbcd23015ad3536bc5501d602f770"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_template_env.html#a79ddbcd23015ad3536bc5501d602f770">TimeStamp</a> = std::chrono::steady_clock::time_point</td></tr>
+<tr class="separator:a79ddbcd23015ad3536bc5501d602f770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa469056aff91cbb7b96f7a500654c9d7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structjinja2_1_1_settings.html">Settings</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_template_env.html#aa469056aff91cbb7b96f7a500654c9d7">GetSettings</a> () const</td></tr>
@@ -139,13 +147,43 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afbfe8b06a23fc9e54af846f3bbfd8b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23c91aaddb108f2babccadc17e0c603b"><td class="memTemplParams" colspan="2">template&lt;typename Fn &gt; </td></tr>
 <tr class="memitem:a23c91aaddb108f2babccadc17e0c603b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_template_env.html#a23c91aaddb108f2babccadc17e0c603b">ApplyGlobals</a> (Fn &amp;&amp;fn)</td></tr>
+<tr class="memdesc:a23c91aaddb108f2babccadc17e0c603b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call the specified function with the current set of global variables under the internal lock.  <a href="classjinja2_1_1_template_env.html#a23c91aaddb108f2babccadc17e0c603b">More...</a><br /></td></tr>
 <tr class="separator:a23c91aaddb108f2babccadc17e0c603b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Global template environment which controls behaviour of the different <a class="el" href="classjinja2_1_1_template.html">Template</a> instances. </p>
 <p>This class is used for fine tuning of the templates behaviour and for state sharing between them. With this class it's possible to control template loading, provide template sources, set global variables, use template inheritance and inclusion.</p>
 <p>It's possible to load templates from the environment via <a class="el" href="classjinja2_1_1_template_env.html#a34edc08d76a10998e8cf3d305147ea12">LoadTemplate</a> or <a class="el" href="classjinja2_1_1_template_env.html#a4070da328d20228bf7a10e50865be8a2">LoadTemplateW</a> methods or to pass instance of the environment directly to the <a class="el" href="classjinja2_1_1_template.html">Template</a> via constructor. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="ac4fcf8dab9047d57154a2ec485547c27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4fcf8dab9047d57154a2ec485547c27">&#9670;&nbsp;</a></span>TimePoint</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classjinja2_1_1_template_env.html#ac4fcf8dab9047d57154a2ec485547c27">jinja2::TemplateEnv::TimePoint</a> =  std::chrono::system_clock::time_point</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79ddbcd23015ad3536bc5501d602f770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79ddbcd23015ad3536bc5501d602f770">&#9670;&nbsp;</a></span>TimeStamp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classjinja2_1_1_template_env.html#a79ddbcd23015ad3536bc5501d602f770">jinja2::TemplateEnv::TimeStamp</a> =  std::chrono::steady_clock::time_point</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a726b6cca6b75d26e81371dede6d6f9fc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a726b6cca6b75d26e81371dede6d6f9fc">&#9670;&nbsp;</a></span>AddFilesystemHandler() <span class="overload">[1/2]</span></h2>
 
@@ -321,6 +359,21 @@ template&lt;typename Fn &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Call the specified function with the current set of global variables under the internal lock. </p>
+<p>Main purpose of this method is to help external code to enumerate global variables thread-safely. Provided functional object is called under the internal lock with the current set of global variables as an argument.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Fn</td><td>Type of the functional object to call </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fn</td><td>Functional object to call </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -510,8 +563,8 @@ template&lt;typename Fn &gt; </div>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassjinja2_1_1_template_env_html"><div class="ttname"><a href="classjinja2_1_1_template_env.html">jinja2::TemplateEnv</a></div><div class="ttdoc">Global template environment which controls behaviour of the different Template instances.</div><div class="ttdef"><b>Definition:</b> template_env.h:56</div></div>
-<div class="ttc" id="aclassjinja2_1_1_template_env_html_a726b6cca6b75d26e81371dede6d6f9fc"><div class="ttname"><a href="classjinja2_1_1_template_env.html#a726b6cca6b75d26e81371dede6d6f9fc">jinja2::TemplateEnv::AddFilesystemHandler</a></div><div class="ttdeci">void AddFilesystemHandler(std::string prefix, FilesystemHandlerPtr h)</div><div class="ttdoc">Add pointer to file system handler with the specified prefix.</div><div class="ttdef"><b>Definition:</b> template_env.h:100</div></div>
+<div class="ttc" id="aclassjinja2_1_1_template_env_html"><div class="ttname"><a href="classjinja2_1_1_template_env.html">jinja2::TemplateEnv</a></div><div class="ttdoc">Global template environment which controls behaviour of the different Template instances.</div><div class="ttdef"><b>Definition:</b> template_env.h:60</div></div>
+<div class="ttc" id="aclassjinja2_1_1_template_env_html_a726b6cca6b75d26e81371dede6d6f9fc"><div class="ttname"><a href="classjinja2_1_1_template_env.html#a726b6cca6b75d26e81371dede6d6f9fc">jinja2::TemplateEnv::AddFilesystemHandler</a></div><div class="ttdeci">void AddFilesystemHandler(std::string prefix, FilesystemHandlerPtr h)</div><div class="ttdoc">Add pointer to file system handler with the specified prefix.</div><div class="ttdef"><b>Definition:</b> template_env.h:107</div></div>
 <!-- HTML footer for doxygen 1.8.16-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

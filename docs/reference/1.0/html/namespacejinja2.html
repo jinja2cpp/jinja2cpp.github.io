@@ -132,6 +132,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_i_error_handler.html">IErrorHandler</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_i_filesystem_handler.html">IFilesystemHandler</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic interface to filesystem handlers (loaders)  <a href="classjinja2_1_1_i_filesystem_handler.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjinja2_1_1_index_based_accessor.html">IndexBasedAccessor</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,8 +144,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface to the generic dictionary type which maps string to some value.  <a href="structjinja2_1_1_map_item_accessor.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_memory_file_system.html">MemoryFileSystem</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filesystem handler for files stored in memory.  <a href="classjinja2_1_1_memory_file_system.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_real_file_system.html">RealFileSystem</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filesystem handler for files stored on the filesystem.  <a href="classjinja2_1_1_real_file_system.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_reflected_data_holder.html">ReflectedDataHolder</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1065,7 +1068,8 @@ template&lt;typename Fn , typename ... ArgDescr&gt; </div>
 </div><!-- fragment --><p> In this sample lambda function with two string params will be invoked from the <a class="el" href="namespacejinja2.html">jinja2</a> template and provided with the specified params. Each param is described by <a class="el" href="structjinja2_1_1_arg_info.html" title="Information about one argument of the user-defined callable.">ArgInfo</a> structure. Result of the function will be converted and passed back to the <a class="el" href="namespacejinja2.html">jinja2</a> template.</p>
 <p>In case the function should accept extra positional args or extra named args this params should be described the following name.</p><ul>
 <li>Extra positional args. <a class="el" href="structjinja2_1_1_arg_info.html">ArgInfo</a> should describe this param with name <code>*args</code>. Param of the function should has <a class="el" href="namespacejinja2.html#a900e54b32933ccfc78242d80f1e18e4d">ValuesList</a> type</li>
-<li>Extra named args. <a class="el" href="structjinja2_1_1_arg_info.html">ArgInfo</a> should describe this param with name <code>*kwargs</code>. Param of the function should has <a class="el" href="namespacejinja2.html#a43543ac86dc683e719bbec4e565dfc8f">ValuesMap</a> type</li>
+<li>Extra named args. <a class="el" href="structjinja2_1_1_arg_info.html">ArgInfo</a> should describe this param with name <code>**kwargs</code>. Param of the function should has <a class="el" href="namespacejinja2.html#a43543ac86dc683e719bbec4e565dfc8f">ValuesMap</a> type</li>
+<li>Current template context. <a class="el" href="structjinja2_1_1_arg_info.html">ArgInfo</a> should describe this param with name <code>*context</code>. Param of the function should has <a class="el" href="classjinja2_1_1_generic_map.html">GenericMap</a> type</li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1229,7 +1233,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespacejinja2_html_a6f1b02d616241f1e16c5ccfc0fd9919d"><div class="ttname"><a href="namespacejinja2.html#a6f1b02d616241f1e16c5ccfc0fd9919d">jinja2::MakeCallable</a></div><div class="ttdeci">auto MakeCallable(Fn &amp;&amp;f, ArgDescr &amp;&amp;... ad)</div><div class="ttdoc">Create user-defined callable from the specified function.</div><div class="ttdef"><b>Definition:</b> user_callable.h:219</div></div>
+<div class="ttc" id="anamespacejinja2_html_a6f1b02d616241f1e16c5ccfc0fd9919d"><div class="ttname"><a href="namespacejinja2.html#a6f1b02d616241f1e16c5ccfc0fd9919d">jinja2::MakeCallable</a></div><div class="ttdeci">auto MakeCallable(Fn &amp;&amp;f, ArgDescr &amp;&amp;... ad)</div><div class="ttdoc">Create user-defined callable from the specified function.</div><div class="ttdef"><b>Definition:</b> user_callable.h:223</div></div>
 <!-- HTML footer for doxygen 1.8.16-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

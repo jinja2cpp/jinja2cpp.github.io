@@ -103,6 +103,9 @@ $(document).ready(function(){initNavTree('classjinja2_1_1_memory_file_system.htm
 </div><!--header-->
 <div class="contents">
 
+<p>Filesystem handler for files stored in memory.  
+ <a href="classjinja2_1_1_memory_file_system.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="filesystem__handler_8h_source.html">filesystem_handler.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for jinja2::MemoryFileSystem:</div>
@@ -110,25 +113,36 @@ Inheritance diagram for jinja2::MemoryFileSystem:</div>
  <div class="center">
   <img src="classjinja2_1_1_memory_file_system.png" usemap="#jinja2::MemoryFileSystem_map" alt=""/>
   <map id="jinja2::MemoryFileSystem_map" name="jinja2::MemoryFileSystem_map">
-<area href="classjinja2_1_1_i_filesystem_handler.html" alt="jinja2::IFilesystemHandler" shape="rect" coords="0,0,155,24"/>
+<area href="classjinja2_1_1_i_filesystem_handler.html" title="Generic interface to filesystem handlers (loaders)" alt="jinja2::IFilesystemHandler" shape="rect" coords="0,0,155,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a865ec7b8bd9a0813a39bb6652679bb42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_memory_file_system.html#a865ec7b8bd9a0813a39bb6652679bb42">AddFile</a> (std::string fileName, std::string fileContent)</td></tr>
+<tr class="memdesc:a865ec7b8bd9a0813a39bb6652679bb42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new narrow-char "file" to the filesystem handler.  <a href="classjinja2_1_1_memory_file_system.html#a865ec7b8bd9a0813a39bb6652679bb42">More...</a><br /></td></tr>
 <tr class="separator:a865ec7b8bd9a0813a39bb6652679bb42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a044dad0aca740f2fd4085b1216f7a77c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_memory_file_system.html#a044dad0aca740f2fd4085b1216f7a77c">AddFile</a> (std::string fileName, std::wstring fileContent)</td></tr>
+<tr class="memdesc:a044dad0aca740f2fd4085b1216f7a77c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add new wide-char "file" to the filesystem handler.  <a href="classjinja2_1_1_memory_file_system.html#a044dad0aca740f2fd4085b1216f7a77c">More...</a><br /></td></tr>
 <tr class="separator:a044dad0aca740f2fd4085b1216f7a77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef0bb8aecde68e0aeff2e530461d39b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacejinja2.html#ab5d363d70df829219a7b5652328977c6">CharFileStreamPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_memory_file_system.html#aef0bb8aecde68e0aeff2e530461d39b8">OpenStream</a> (const std::string &amp;name) const override</td></tr>
+<tr class="memdesc:aef0bb8aecde68e0aeff2e530461d39b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method is called to open the file with the specified name in 'narrow-char' mode.  <a href="classjinja2_1_1_memory_file_system.html#aef0bb8aecde68e0aeff2e530461d39b8">More...</a><br /></td></tr>
 <tr class="separator:aef0bb8aecde68e0aeff2e530461d39b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a008a9a04f0961215e0cbc5d739d2df7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacejinja2.html#ad07d25b586e095c48d73b504a49d4697">WCharFileStreamPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_memory_file_system.html#a008a9a04f0961215e0cbc5d739d2df7f">OpenWStream</a> (const std::string &amp;name) const override</td></tr>
+<tr class="memdesc:a008a9a04f0961215e0cbc5d739d2df7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method is called to open the file with the specified name in 'wide-char' mode.  <a href="classjinja2_1_1_memory_file_system.html#a008a9a04f0961215e0cbc5d739d2df7f">More...</a><br /></td></tr>
 <tr class="separator:a008a9a04f0961215e0cbc5d739d2df7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2552ba005db25f41d4c7b3d589d3092"><td class="memItemLeft" align="right" valign="top">nonstd::optional&lt; std::chrono::system_clock::time_point &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_memory_file_system.html#aa2552ba005db25f41d4c7b3d589d3092">GetLastModificationDate</a> (const std::string &amp;name) const override</td></tr>
+<tr class="memdesc:aa2552ba005db25f41d4c7b3d589d3092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method is called to obtain the modification date of the specified file (if applicable)  <a href="classjinja2_1_1_memory_file_system.html#aa2552ba005db25f41d4c7b3d589d3092">More...</a><br /></td></tr>
+<tr class="separator:aa2552ba005db25f41d4c7b3d589d3092"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classjinja2_1_1_i_filesystem_handler"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classjinja2_1_1_i_filesystem_handler')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classjinja2_1_1_i_filesystem_handler.html">jinja2::IFilesystemHandler</a></td></tr>
 <tr class="memitem:af1e98b85bed16d51148d42d64fb07e40 inherit pub_methods_classjinja2_1_1_i_filesystem_handler"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjinja2_1_1_i_filesystem_handler.html#af1e98b85bed16d51148d42d64fb07e40">~IFilesystemHandler</a> ()=default</td></tr>
+<tr class="memdesc:af1e98b85bed16d51148d42d64fb07e40 inherit pub_methods_classjinja2_1_1_i_filesystem_handler"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classjinja2_1_1_i_filesystem_handler.html#af1e98b85bed16d51148d42d64fb07e40">More...</a><br /></td></tr>
 <tr class="separator:af1e98b85bed16d51148d42d64fb07e40 inherit pub_methods_classjinja2_1_1_i_filesystem_handler"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Filesystem handler for files stored in memory. </p>
+<p>This filesystem handler implements the simple dictionary object which maps name of the file to it's content. New files can be added by <a class="el" href="classjinja2_1_1_memory_file_system.html#a865ec7b8bd9a0813a39bb6652679bb42">AddFile</a> methods. Content of the files automatically converted to narrow/wide strings representation if necessary. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a865ec7b8bd9a0813a39bb6652679bb42"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a865ec7b8bd9a0813a39bb6652679bb42">&#9670;&nbsp;</a></span>AddFile() <span class="overload">[1/2]</span></h2>
 
@@ -154,6 +168,16 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Add new narrow-char "file" to the filesystem handler. </p>
+<p>Adds new file entry to the internal dictionary object or overwrite the existing one. New entry contains the specified content of the file</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>Name of the file to add </td></tr>
+    <tr><td class="paramname">fileContent</td><td>Content of the file to add </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -183,6 +207,54 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Add new wide-char "file" to the filesystem handler. </p>
+<p>Adds new file entry to the internal dictionary object or overwrite the existing one. New entry contains the specified content of the file</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fileName</td><td>Name of the file to add </td></tr>
+    <tr><td class="paramname">fileContent</td><td>Content of the file to add </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa2552ba005db25f41d4c7b3d589d3092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2552ba005db25f41d4c7b3d589d3092">&#9670;&nbsp;</a></span>GetLastModificationDate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nonstd::optional&lt;std::chrono::system_clock::time_point&gt; jinja2::MemoryFileSystem::GetLastModificationDate </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method is called to obtain the modification date of the specified file (if applicable) </p>
+<p>If the underlaying filesystem supports retrival of the last modification date of the file this method should return this date when called. In other case it should return the empty optional object. Main purpose of this method is to help templates loader to determine the necessity of cached template reload</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the file to get the last modification date </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Last modification date (if applicable) or empty optional object otherwise </dd></dl>
+
+<p>Implements <a class="el" href="classjinja2_1_1_i_filesystem_handler.html#a9bceaeb724626d1f9055e5be8ee5cc9f">jinja2::IFilesystemHandler</a>.</p>
+
 </div>
 </div>
 <a id="aef0bb8aecde68e0aeff2e530461d39b8"></a>
@@ -208,6 +280,16 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Method is called to open the file with the specified name in 'narrow-char' mode. </p>
+<p>Method should return unique pointer to the std::istream object with custom deleter (<a class="el" href="namespacejinja2.html#ab5d363d70df829219a7b5652328977c6">CharFileStreamPtr</a>) . Deleter should properly delete pointee stream object.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the file to open </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Opened stream object or empty pointer in case of any error </dd></dl>
 
 <p>Implements <a class="el" href="classjinja2_1_1_i_filesystem_handler.html#ab20beae340570f352193bd12819d8efd">jinja2::IFilesystemHandler</a>.</p>
 
@@ -236,6 +318,16 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Method is called to open the file with the specified name in 'wide-char' mode. </p>
+<p>Method should return unique pointer to the std::wistream object with custom deleter (<a class="el" href="namespacejinja2.html#ad07d25b586e095c48d73b504a49d4697">WCharFileStreamPtr</a>) . Deleter should properly delete pointee stream object.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the file to open </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Opened stream object or empty pointer in case of any error </dd></dl>
 
 <p>Implements <a class="el" href="classjinja2_1_1_i_filesystem_handler.html#a76b088ac5bcff7ecd673b45ef59906cb">jinja2::IFilesystemHandler</a>.</p>
 

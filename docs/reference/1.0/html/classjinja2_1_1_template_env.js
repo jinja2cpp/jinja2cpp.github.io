@@ -1,5 +1,7 @@
 var classjinja2_1_1_template_env =
 [
+    [ "TimePoint", "classjinja2_1_1_template_env.html#ac4fcf8dab9047d57154a2ec485547c27", null ],
+    [ "TimeStamp", "classjinja2_1_1_template_env.html#a79ddbcd23015ad3536bc5501d602f770", null ],
     [ "AddFilesystemHandler", "classjinja2_1_1_template_env.html#a726b6cca6b75d26e81371dede6d6f9fc", null ],
     [ "AddFilesystemHandler", "classjinja2_1_1_template_env.html#a6d3722558a62918341a824e8e6c5b85b", null ],
     [ "AddGlobal", "classjinja2_1_1_template_env.html#a051f8e27c7c3d402a131f3a62875764d", null ],
