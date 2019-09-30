@@ -102,6 +102,9 @@ $(document).ready(function(){initNavTree('structjinja2_1_1_index_based_accessor.
 </div><!--header-->
 <div class="contents">
 
+<p>Interface for accessing items in list by the indexes.  
+ <a href="structjinja2_1_1_index_based_accessor.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="generic__list_8h_source.html">generic_list.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for jinja2::IndexBasedAccessor:</div>
@@ -116,11 +119,13 @@ Inheritance diagram for jinja2::IndexBasedAccessor:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8aaa0a86ffa2863e5ebec57938379480"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classjinja2_1_1_value.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjinja2_1_1_index_based_accessor.html#a8aaa0a86ffa2863e5ebec57938379480">GetItemByIndex</a> (int64_t idx) const =0</td></tr>
+<tr class="memdesc:a8aaa0a86ffa2863e5ebec57938379480"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called to get the item by the specified index.  <a href="structjinja2_1_1_index_based_accessor.html#a8aaa0a86ffa2863e5ebec57938379480">More...</a><br /></td></tr>
 <tr class="separator:a8aaa0a86ffa2863e5ebec57938379480"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d44fa38e2ac481204782a8094874e35"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjinja2_1_1_index_based_accessor.html#a3d44fa38e2ac481204782a8094874e35">GetItemsCount</a> () const =0</td></tr>
-<tr class="separator:a3d44fa38e2ac481204782a8094874e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Interface for accessing items in list by the indexes. </p>
+<p>This interface should provided by the particular list implementation in case of support index-based access to the items. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8aaa0a86ffa2863e5ebec57938379480"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8aaa0a86ffa2863e5ebec57938379480">&#9670;&nbsp;</a></span>GetItemByIndex()</h2>
 
@@ -145,34 +150,16 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>This method is called to get the item by the specified index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>Index of item to get</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>requested item </dd></dl>
+
 <p>Implemented in <a class="el" href="structjinja2_1_1lists__impl_1_1_random_iterator_list_accessor.html#af5143f89c857c48270f5610da6f29dac">jinja2::lists_impl::RandomIteratorListAccessor&lt; It1, It2 &gt;</a>.</p>
-
-</div>
-</div>
-<a id="a3d44fa38e2ac481204782a8094874e35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d44fa38e2ac481204782a8094874e35">&#9670;&nbsp;</a></span>GetItemsCount()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual size_t jinja2::IndexBasedAccessor::GetItemsCount </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="structjinja2_1_1lists__impl_1_1_random_iterator_list_accessor.html#a06d3eae6c7b6094d2c58a09a97dd1c44">jinja2::lists_impl::RandomIteratorListAccessor&lt; It1, It2 &gt;</a>.</p>
 
 </div>
 </div>

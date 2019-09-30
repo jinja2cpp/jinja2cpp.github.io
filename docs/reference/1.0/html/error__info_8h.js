@@ -10,6 +10,12 @@ var error__info_8h =
       [ "UnexpectedException", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a04f57c1b5fdbae26f48113cda5cc200b", null ],
       [ "YetUnsupported", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a455fa178adfd1878fc4b82c5ec8d43b2", null ],
       [ "FileNotFound", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a2767828026039e8ba7b38973cbb701f2", null ],
+      [ "ExtensionDisabled", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a72f6ba2ac5bf94128007f06d179fc02c", null ],
+      [ "TemplateEnvAbsent", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a1453066137406b4d0b8c54e8d5695daf", null ],
+      [ "TemplateNotFound", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1ac8b92189652e748e7ef7bdca13f0358e", null ],
+      [ "TemplateNotParsed", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1abd64ca5c860d0880aca3a148a57ac1ee", null ],
+      [ "InvalidValueType", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a4aff26a4cf7597ae1db7983914d5539d", null ],
+      [ "InvalidTemplateName", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a97d681f584b1cd6fae08e2339fb571c8", null ],
       [ "ExpectedStringLiteral", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1add5091e8fb840be29186cd741913b569", null ],
       [ "ExpectedIdentifier", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1ac65be8a068925d8e409c21e1485fe82c", null ],
       [ "ExpectedSquareBracket", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a18fb41c60916c0e6c0f4ccc648660665", null ],
@@ -25,13 +31,7 @@ var error__info_8h =
       [ "UnexpectedExprBegin", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1ae6b6f07d2b1139249e1b6e7a1f1542ef", null ],
       [ "UnexpectedExprEnd", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a7c9937861c16b4d034d74e82ff7f43a9", null ],
       [ "UnexpectedStmtBegin", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a3f204b3d5e06af25ddf2c04a4fc440ab", null ],
-      [ "UnexpectedStmtEnd", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1aa33bf8c90947ad187e726c2ee7b73938", null ],
-      [ "TemplateNotFound", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1ac8b92189652e748e7ef7bdca13f0358e", null ],
-      [ "TemplateNotParsed", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1abd64ca5c860d0880aca3a148a57ac1ee", null ],
-      [ "InvalidValueType", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a4aff26a4cf7597ae1db7983914d5539d", null ],
-      [ "InvalidTemplateName", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a97d681f584b1cd6fae08e2339fb571c8", null ],
-      [ "ExtensionDisabled", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a72f6ba2ac5bf94128007f06d179fc02c", null ],
-      [ "TemplateEnvAbsent", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1a1453066137406b4d0b8c54e8d5695daf", null ]
+      [ "UnexpectedStmtEnd", "error__info_8h.html#a0452be9d6e9af8316118f7373cfd5ef1aa33bf8c90947ad187e726c2ee7b73938", null ]
     ] ],
     [ "operator<<", "error__info_8h.html#ae4f3765040b9fdeb60acaa79fe35b9c8", null ],
     [ "operator<<", "error__info_8h.html#ae963095e251f54ea002309b21965ef8e", null ]

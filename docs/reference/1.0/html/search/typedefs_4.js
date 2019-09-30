@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['isreflectedtype_421',['IsReflectedType',['../namespacejinja2_1_1detail.html#a73ce0950f6979a295428dd225f9eaf00',1,'jinja2::detail']]],
-  ['iterator_5fcategory_422',['iterator_category',['../classjinja2_1_1_generic_list_iterator.html#ac7aec0e7f4a5db72218cf985e0b0ad84',1,'jinja2::GenericListIterator']]]
+  ['recwrapper_358',['RecWrapper',['../namespacejinja2.html#a840ea059b9cde4e11355766b0651130c',1,'jinja2']]],
+  ['result_359',['Result',['../namespacejinja2.html#a1784344a249a9262f9fc9faba62c66c9',1,'jinja2']]],
+  ['resultw_360',['ResultW',['../namespacejinja2.html#a1e1fb4edd273fa5dbbb4da1f143bc44e',1,'jinja2']]]
 ];

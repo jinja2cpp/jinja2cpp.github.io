@@ -302,7 +302,7 @@ $(document).ready(function(){initNavTree('user__callable_8h_source.html','');});
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="comment"> * );</span></div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="comment"> * ```</span></div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="comment"> * In this sample lambda function with two string params will be invoked from the jinja2 template and provided with</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="comment"> * the specified params. Each param is described by \refitem ArgInfo structure. Result of the function will be converted</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="comment"> * the specified params. Each param is described by \ref ArgInfo structure. Result of the function will be converted</span></div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="comment"> * and passed back to the jinja2 template.</span></div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="comment"> * In case the function should accept extra positional args or extra named args this params should be described the</span></div>
@@ -317,7 +317,7 @@ $(document).ready(function(){initNavTree('user__callable_8h_source.html','');});
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment"> * \param f  Function which should be called</span></div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="comment"> * \param ad Function param descriptors</span></div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment"> * \returns Instance of the properly initialized \refitem UserCallable structure</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="comment"> * \returns Instance of the properly initialized \ref UserCallable structure</span></div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Fn, <span class="keyword">typename</span> ... ArgDescr&gt;</div>
 <div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="namespacejinja2.html#a6f1b02d616241f1e16c5ccfc0fd9919d">  223</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacejinja2.html#a6f1b02d616241f1e16c5ccfc0fd9919d">MakeCallable</a>(Fn&amp;&amp; f, ArgDescr&amp;&amp; ... ad)</div>

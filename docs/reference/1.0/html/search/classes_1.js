@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cloner_229',['Cloner',['../structjinja2_1_1_generic_list_iterator_1_1_cloner.html',1,'jinja2::GenericListIterator']]]
+  ['data_195',['Data',['../structjinja2_1_1_error_info_tpl_1_1_data.html',1,'jinja2::ErrorInfoTpl']]]
 ];

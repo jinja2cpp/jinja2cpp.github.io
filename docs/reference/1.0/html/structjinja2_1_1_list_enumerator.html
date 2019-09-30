@@ -102,6 +102,9 @@ $(document).ready(function(){initNavTree('structjinja2_1_1_list_enumerator.html'
 </div><!--header-->
 <div class="contents">
 
+<p>Generic list enumerator interface.  
+ <a href="structjinja2_1_1_list_enumerator.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="generic__list_8h_source.html">generic_list.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for jinja2::ListEnumerator:</div>
@@ -118,22 +121,32 @@ Inheritance diagram for jinja2::ListEnumerator:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ade53beb9ef2796a9f81bb75817acb333"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjinja2_1_1_list_enumerator.html#ade53beb9ef2796a9f81bb75817acb333">~ListEnumerator</a> ()</td></tr>
-<tr class="separator:ade53beb9ef2796a9f81bb75817acb333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74982a14bad6697070806686ef7441f5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjinja2_1_1_list_enumerator.html#a74982a14bad6697070806686ef7441f5">~ListEnumerator</a> ()=default</td></tr>
+<tr class="memdesc:a74982a14bad6697070806686ef7441f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="structjinja2_1_1_list_enumerator.html#a74982a14bad6697070806686ef7441f5">More...</a><br /></td></tr>
+<tr class="separator:a74982a14bad6697070806686ef7441f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98f24fb967ffeb746e0bbf372da4c508"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjinja2_1_1_list_enumerator.html#a98f24fb967ffeb746e0bbf372da4c508">Reset</a> ()=0</td></tr>
+<tr class="memdesc:a98f24fb967ffeb746e0bbf372da4c508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method is called to reset enumerator to the initial state ('before the first element') if applicable.  <a href="structjinja2_1_1_list_enumerator.html#a98f24fb967ffeb746e0bbf372da4c508">More...</a><br /></td></tr>
 <tr class="separator:a98f24fb967ffeb746e0bbf372da4c508"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ef660eb47c3017c71bdab978c7f3b70"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjinja2_1_1_list_enumerator.html#a7ef660eb47c3017c71bdab978c7f3b70">MoveNext</a> ()=0</td></tr>
+<tr class="memdesc:a7ef660eb47c3017c71bdab978c7f3b70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method is called to move the enumerator to the next item (if any)  <a href="structjinja2_1_1_list_enumerator.html#a7ef660eb47c3017c71bdab978c7f3b70">More...</a><br /></td></tr>
 <tr class="separator:a7ef660eb47c3017c71bdab978c7f3b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad87ffc5ef7b806b5e9a51e7caee3522b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classjinja2_1_1_value.html">Value</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjinja2_1_1_list_enumerator.html#ad87ffc5ef7b806b5e9a51e7caee3522b">GetCurrent</a> () const =0</td></tr>
+<tr class="memdesc:ad87ffc5ef7b806b5e9a51e7caee3522b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method is called to get the current item value. Can be called multiply times.  <a href="structjinja2_1_1_list_enumerator.html#ad87ffc5ef7b806b5e9a51e7caee3522b">More...</a><br /></td></tr>
 <tr class="separator:ad87ffc5ef7b806b5e9a51e7caee3522b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60f59531a2557bd7f345ae0439a8bb40"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacejinja2.html#af09a412c69d00ec1cb988822adeaf848">ListEnumeratorPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjinja2_1_1_list_enumerator.html#a60f59531a2557bd7f345ae0439a8bb40">Clone</a> () const =0</td></tr>
+<tr class="memdesc:a60f59531a2557bd7f345ae0439a8bb40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method is called to make a deep <b>copy</b> of the current enumerator state if possible.  <a href="structjinja2_1_1_list_enumerator.html#a60f59531a2557bd7f345ae0439a8bb40">More...</a><br /></td></tr>
 <tr class="separator:a60f59531a2557bd7f345ae0439a8bb40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a772d0a8d57f78455fdb94b192b538c96"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacejinja2.html#af09a412c69d00ec1cb988822adeaf848">ListEnumeratorPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjinja2_1_1_list_enumerator.html#a772d0a8d57f78455fdb94b192b538c96">Move</a> ()=0</td></tr>
+<tr class="memdesc:a772d0a8d57f78455fdb94b192b538c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method is called to transfer current enumerator state to the new object.  <a href="structjinja2_1_1_list_enumerator.html#a772d0a8d57f78455fdb94b192b538c96">More...</a><br /></td></tr>
 <tr class="separator:a772d0a8d57f78455fdb94b192b538c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ade53beb9ef2796a9f81bb75817acb333"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade53beb9ef2796a9f81bb75817acb333">&#9670;&nbsp;</a></span>~ListEnumerator()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Generic list enumerator interface. </p>
+<p>This interface should be implemented by the lists of any type. Interface is used to enumerate the list contents item by item.</p>
+<p>Implementation notes: Initial state of the enumerator should be "before the first item". So, the first call of <a class="el" href="structjinja2_1_1_list_enumerator.html#a7ef660eb47c3017c71bdab978c7f3b70">MoveNext</a> method either moves the enumerator to the first element end returns <code>true</code> or moves enumerator to the end and returns <code>false</code> in case of empty list. Each call of <a class="el" href="structjinja2_1_1_list_enumerator.html#ad87ffc5ef7b806b5e9a51e7caee3522b">GetCurrent</a> method should return the current enumerable item. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a74982a14bad6697070806686ef7441f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74982a14bad6697070806686ef7441f5">&#9670;&nbsp;</a></span>~ListEnumerator()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -150,10 +163,12 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destructor. </p>
 
 </div>
 </div>
@@ -180,6 +195,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Method is called to make a deep <b>copy</b> of the current enumerator state if possible. </p>
+<dl class="section return"><dt>Returns</dt><dd>New enumerator object with copy of the current enumerator state or empty pointer if copying is not applicable to the enumerator </dd></dl>
 
 <p>Implemented in <a class="el" href="classjinja2_1_1lists__impl_1_1_generated_list_accessor_1_1_enumerator.html#a2ef73fa05dbc5a0410e2f9cf5dbe5623">jinja2::lists_impl::GeneratedListAccessor::Enumerator</a>, <a class="el" href="structjinja2_1_1lists__impl_1_1_random_iterator_list_accessor_1_1_enumerator.html#a8ad15749bf2fc34305d29d4e46d8b8eb">jinja2::lists_impl::RandomIteratorListAccessor&lt; It1, It2 &gt;::Enumerator</a>, <a class="el" href="structjinja2_1_1lists__impl_1_1_forward_iterator_list_accessor_1_1_enumerator.html#acea81b6c60a2d218e04e926a0202c7ec">jinja2::lists_impl::ForwardIteratorListAccessor&lt; It1, It2 &gt;::Enumerator</a>, and <a class="el" href="structjinja2_1_1lists__impl_1_1_input_iterator_list_accessor_1_1_enumerator.html#a0cb77e5bec665600934781e1baac4676">jinja2::lists_impl::InputIteratorListAccessor&lt; It1, It2 &gt;::Enumerator</a>.</p>
 
@@ -208,6 +226,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Method is called to get the current item value. Can be called multiply times. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classjinja2_1_1_value.html" title="Generic value class.">Value</a> of the item if the current item is valid item and empty value otherwise </dd></dl>
+
 <p>Implemented in <a class="el" href="classjinja2_1_1lists__impl_1_1_generated_list_accessor_1_1_enumerator.html#a4ae4ea6fcdc77c84d1d884f9b04d7099">jinja2::lists_impl::GeneratedListAccessor::Enumerator</a>, <a class="el" href="structjinja2_1_1lists__impl_1_1_random_iterator_list_accessor_1_1_enumerator.html#abdf0fbdcc7be9617586a73679911ae18">jinja2::lists_impl::RandomIteratorListAccessor&lt; It1, It2 &gt;::Enumerator</a>, <a class="el" href="structjinja2_1_1lists__impl_1_1_forward_iterator_list_accessor_1_1_enumerator.html#a0908e3083208170b89a13f0974c9085a">jinja2::lists_impl::ForwardIteratorListAccessor&lt; It1, It2 &gt;::Enumerator</a>, and <a class="el" href="structjinja2_1_1lists__impl_1_1_input_iterator_list_accessor_1_1_enumerator.html#a15daf18da49ca6ae9dbd28b5efc9d438">jinja2::lists_impl::InputIteratorListAccessor&lt; It1, It2 &gt;::Enumerator</a>.</p>
 
 </div>
@@ -234,6 +255,10 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Method is called to transfer current enumerator state to the new object. </p>
+<p>State of the enumerator after successful creation of the new object is unspecified by there is a guarantee that there will no calls to the 'moved' enumerator. Destruction of the moved enumerator shouldn't affect the newly created object.</p>
+<dl class="section return"><dt>Returns</dt><dd>New enumerator object which holds and owns the current enumerator state </dd></dl>
 
 <p>Implemented in <a class="el" href="classjinja2_1_1lists__impl_1_1_generated_list_accessor_1_1_enumerator.html#ac49b68d2e410bf692e2cbf73f8524dc2">jinja2::lists_impl::GeneratedListAccessor::Enumerator</a>, <a class="el" href="structjinja2_1_1lists__impl_1_1_random_iterator_list_accessor_1_1_enumerator.html#ae861000d21986ddcd3cc1cc307e5cbf7">jinja2::lists_impl::RandomIteratorListAccessor&lt; It1, It2 &gt;::Enumerator</a>, <a class="el" href="structjinja2_1_1lists__impl_1_1_forward_iterator_list_accessor_1_1_enumerator.html#abd9624415cf4abd3a3203e2e59944db8">jinja2::lists_impl::ForwardIteratorListAccessor&lt; It1, It2 &gt;::Enumerator</a>, and <a class="el" href="structjinja2_1_1lists__impl_1_1_input_iterator_list_accessor_1_1_enumerator.html#a36e71685cc008bcf87de7b3d7bc6c187">jinja2::lists_impl::InputIteratorListAccessor&lt; It1, It2 &gt;::Enumerator</a>.</p>
 
@@ -262,6 +287,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Method is called to move the enumerator to the next item (if any) </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if enumerator successfully moved and <code>false</code> if enumerator reaches the end of the sequence. </dd></dl>
+
 <p>Implemented in <a class="el" href="classjinja2_1_1lists__impl_1_1_generated_list_accessor_1_1_enumerator.html#a82316032bb48fc9d9714922b5d090a8f">jinja2::lists_impl::GeneratedListAccessor::Enumerator</a>, <a class="el" href="structjinja2_1_1lists__impl_1_1_random_iterator_list_accessor_1_1_enumerator.html#a57c325e73ce7a6df5ffa779f95d7491b">jinja2::lists_impl::RandomIteratorListAccessor&lt; It1, It2 &gt;::Enumerator</a>, <a class="el" href="structjinja2_1_1lists__impl_1_1_forward_iterator_list_accessor_1_1_enumerator.html#acf8c3ee2df5aa6f86ae98145ed828206">jinja2::lists_impl::ForwardIteratorListAccessor&lt; It1, It2 &gt;::Enumerator</a>, and <a class="el" href="structjinja2_1_1lists__impl_1_1_input_iterator_list_accessor_1_1_enumerator.html#a4d5b152b3181228f2f5dc496fb8cc79a">jinja2::lists_impl::InputIteratorListAccessor&lt; It1, It2 &gt;::Enumerator</a>.</p>
 
 </div>
@@ -288,6 +316,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Method is called to reset enumerator to the initial state ('before the first element') if applicable. </p>
+<p>For the sequences which allow multi-pass iteration this method should reset enumerator to the initial state. For the single-pass sequences method can do nothing. </p>
 
 <p>Implemented in <a class="el" href="classjinja2_1_1lists__impl_1_1_generated_list_accessor_1_1_enumerator.html#a764d8f51b8b604f3284519563f7522fd">jinja2::lists_impl::GeneratedListAccessor::Enumerator</a>, <a class="el" href="structjinja2_1_1lists__impl_1_1_random_iterator_list_accessor_1_1_enumerator.html#a173069a0e22b7df781fe4f69bc94636f">jinja2::lists_impl::RandomIteratorListAccessor&lt; It1, It2 &gt;::Enumerator</a>, <a class="el" href="structjinja2_1_1lists__impl_1_1_forward_iterator_list_accessor_1_1_enumerator.html#aa978e946d76694e153abf18c6908c072">jinja2::lists_impl::ForwardIteratorListAccessor&lt; It1, It2 &gt;::Enumerator</a>, and <a class="el" href="structjinja2_1_1lists__impl_1_1_input_iterator_list_accessor_1_1_enumerator.html#af6d3d17d0f127411a2ca24f54b8249af">jinja2::lists_impl::InputIteratorListAccessor&lt; It1, It2 &gt;::Enumerator</a>.</p>
 

@@ -103,6 +103,9 @@ $(document).ready(function(){initNavTree('structjinja2_1_1_list_item_accessor.ht
 </div><!--header-->
 <div class="contents">
 
+<p>Generic list implementation interface.  
+ <a href="structjinja2_1_1_list_item_accessor.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="generic__list_8h_source.html">generic_list.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for jinja2::ListItemAccessor:</div>
@@ -119,24 +122,38 @@ Inheritance diagram for jinja2::ListItemAccessor:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adb449f724f1ee8d87e51a9894938990e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjinja2_1_1_list_item_accessor.html#adb449f724f1ee8d87e51a9894938990e">~ListItemAccessor</a> ()</td></tr>
-<tr class="separator:adb449f724f1ee8d87e51a9894938990e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5765cc4e6451a186359e7bb675d24870"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjinja2_1_1_list_item_accessor.html#a5765cc4e6451a186359e7bb675d24870">~ListItemAccessor</a> ()=default</td></tr>
+<tr class="separator:a5765cc4e6451a186359e7bb675d24870"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8aed2c39331a3cfdabf62b98a92e9d0"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="structjinja2_1_1_index_based_accessor.html">IndexBasedAccessor</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjinja2_1_1_list_item_accessor.html#ad8aed2c39331a3cfdabf62b98a92e9d0">GetIndexer</a> () const =0</td></tr>
+<tr class="memdesc:ad8aed2c39331a3cfdabf62b98a92e9d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called to get pointer to indexer interface implementation (if applicable)  <a href="structjinja2_1_1_list_item_accessor.html#ad8aed2c39331a3cfdabf62b98a92e9d0">More...</a><br /></td></tr>
 <tr class="separator:ad8aed2c39331a3cfdabf62b98a92e9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65182c6dd3a51ae9a6ac46298daf03cd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacejinja2.html#af09a412c69d00ec1cb988822adeaf848">ListEnumeratorPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjinja2_1_1_list_item_accessor.html#a65182c6dd3a51ae9a6ac46298daf03cd">CreateEnumerator</a> () const =0</td></tr>
+<tr class="memdesc:a65182c6dd3a51ae9a6ac46298daf03cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called to get enumerator of the particular list.  <a href="structjinja2_1_1_list_item_accessor.html#a65182c6dd3a51ae9a6ac46298daf03cd">More...</a><br /></td></tr>
 <tr class="separator:a65182c6dd3a51ae9a6ac46298daf03cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ebc4a6eec20a835895bf57bb9457e71"><td class="memItemLeft" align="right" valign="top">virtual nonstd::optional&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjinja2_1_1_list_item_accessor.html#a3ebc4a6eec20a835895bf57bb9457e71">GetSize</a> () const =0</td></tr>
+<tr class="memdesc:a3ebc4a6eec20a835895bf57bb9457e71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called to get size of the list if applicable.  <a href="structjinja2_1_1_list_item_accessor.html#a3ebc4a6eec20a835895bf57bb9457e71">More...</a><br /></td></tr>
 <tr class="separator:a3ebc4a6eec20a835895bf57bb9457e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a24c7d2925529ba106575b192b580c257"><td class="memTemplParams" colspan="2">template&lt;typename T , typename ... Args&gt; </td></tr>
+<tr class="memitem:a24c7d2925529ba106575b192b580c257"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
 <tr class="memitem:a24c7d2925529ba106575b192b580c257"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="namespacejinja2.html#af09a412c69d00ec1cb988822adeaf848">ListEnumeratorPtr</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structjinja2_1_1_list_item_accessor.html#a24c7d2925529ba106575b192b580c257">MakeEnumerator</a> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a24c7d2925529ba106575b192b580c257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper factory method of particular enumerator implementation.  <a href="structjinja2_1_1_list_item_accessor.html#a24c7d2925529ba106575b192b580c257">More...</a><br /></td></tr>
 <tr class="separator:a24c7d2925529ba106575b192b580c257"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="adb449f724f1ee8d87e51a9894938990e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb449f724f1ee8d87e51a9894938990e">&#9670;&nbsp;</a></span>~ListItemAccessor()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Generic list implementation interface. </p>
+<p>Every list implementation should implement this interface for providing access to the items of the list. There are several types of lists and implementation notes for every of them:</p><ul>
+<li><b>Single-pass sequences</b> . For instance, input-stream iterators, generator-based sequences. This type of generic lists should provide no size and no indexer. Enumerator of such sequence supports should be moveable but non-copyable and non-resetable.</li>
+<li><b>Forward sequences</b> . For instance, single-linked lists. This type of lists should provide no size and indexer. Enumerator should be moveable, copyable and resetable.</li>
+<li><b>Bidirectional sequences</b>. Have got the same implementation requirements as forward sequences.</li>
+<li><p class="startli"><b>Random-access sequences</b>. Such as arrays or vectors. Should provide valid size (number of stored items), valid indexer implementation and moveable, copyable and resetable enumerator.</p>
+<p class="startli">It's assumed that indexer interface is a part of list implementation. </p>
+</li>
+</ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a5765cc4e6451a186359e7bb675d24870"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5765cc4e6451a186359e7bb675d24870">&#9670;&nbsp;</a></span>~ListItemAccessor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -153,7 +170,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -184,6 +201,11 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Called to get enumerator of the particular list. </p>
+<p>See implementation notes for the interface. This method should return unique pointer (with custom deleter) to the <a class="el" href="structjinja2_1_1_list_enumerator.html" title="Generic list enumerator interface.">ListEnumerator</a> interface implementation. Enumerator implementation should follow the requirements for the particular list type implementation.</p>
+<p>Method can be called several times from the different threads.</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the enumerator of the list </dd></dl>
+
 <p>Implemented in <a class="el" href="classjinja2_1_1lists__impl_1_1_generated_list_accessor.html#aff415304e1e9d98b3417c84c4f1e8374">jinja2::lists_impl::GeneratedListAccessor</a>, <a class="el" href="structjinja2_1_1lists__impl_1_1_random_iterator_list_accessor.html#a782b1a645d7a06573b3cfea3e73078d5">jinja2::lists_impl::RandomIteratorListAccessor&lt; It1, It2 &gt;</a>, <a class="el" href="structjinja2_1_1lists__impl_1_1_forward_iterator_list_accessor.html#a043716c00fe35b71a8f0185d381839f0">jinja2::lists_impl::ForwardIteratorListAccessor&lt; It1, It2 &gt;</a>, and <a class="el" href="structjinja2_1_1lists__impl_1_1_input_iterator_list_accessor.html#a213931ea914a8cbdde19762c9e56ab49">jinja2::lists_impl::InputIteratorListAccessor&lt; It1, It2 &gt;</a>.</p>
 
 </div>
@@ -211,6 +233,11 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Called to get pointer to indexer interface implementation (if applicable) </p>
+<p>See implementation notes for the interface. This method should return pointer to the valid indexer interface if (and only if) list implementation supports random access to the items.</p>
+<p>Method can be called several times from the different threads.</p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the indexer interface implementation or null if indexing isn't supported for the list </dd></dl>
+
 <p>Implemented in <a class="el" href="classjinja2_1_1lists__impl_1_1_generated_list_accessor.html#a11a17b1b784d66e006cb4cc96f582274">jinja2::lists_impl::GeneratedListAccessor</a>, <a class="el" href="structjinja2_1_1lists__impl_1_1_random_iterator_list_accessor.html#a621a9c8f252de776f53bdf9959ace3c8">jinja2::lists_impl::RandomIteratorListAccessor&lt; It1, It2 &gt;</a>, <a class="el" href="structjinja2_1_1lists__impl_1_1_forward_iterator_list_accessor.html#a3b8d6a94231642a84556dcf26bc8e959">jinja2::lists_impl::ForwardIteratorListAccessor&lt; It1, It2 &gt;</a>, and <a class="el" href="structjinja2_1_1lists__impl_1_1_input_iterator_list_accessor.html#ac2e3ad330dbda675e602465096d360f9">jinja2::lists_impl::InputIteratorListAccessor&lt; It1, It2 &gt;</a>.</p>
 
 </div>
@@ -237,6 +264,11 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Called to get size of the list if applicable. </p>
+<p>See implementation notes for the interface. This method should return valid (non-empty) size only for random-access sequences. In other cases this method should return empty optional.</p>
+<p>Method can be called several times from the different threads.</p>
+<dl class="section return"><dt>Returns</dt><dd>Non-empty optional with the valid size of the list or empty optional in case of non-random sequence implementation </dd></dl>
 
 <p>Implemented in <a class="el" href="classjinja2_1_1lists__impl_1_1_generated_list_accessor.html#adf5af270706eca62cd3e5cb6fc04491b">jinja2::lists_impl::GeneratedListAccessor</a>, <a class="el" href="structjinja2_1_1lists__impl_1_1_random_iterator_list_accessor.html#a451caa7a581862cf984d7cf48aa42b22">jinja2::lists_impl::RandomIteratorListAccessor&lt; It1, It2 &gt;</a>, <a class="el" href="structjinja2_1_1lists__impl_1_1_forward_iterator_list_accessor.html#a3531e670df59db68abd02c0a72f9ec96">jinja2::lists_impl::ForwardIteratorListAccessor&lt; It1, It2 &gt;</a>, and <a class="el" href="structjinja2_1_1lists__impl_1_1_input_iterator_list_accessor.html#a102c4ab5e52d34e57a34cde461ad539a">jinja2::lists_impl::InputIteratorListAccessor&lt; It1, It2 &gt;</a>.</p>
 
@@ -267,6 +299,22 @@ template&lt;typename T , typename ... Args&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Helper factory method of particular enumerator implementation. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of enumerator to create </td></tr>
+    <tr><td class="paramname">Args</td><td>Type of enumerator construct args </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Actual enumerator constructor args </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Unique pointer to the enumerator </dd></dl>
 
 </div>
 </div>

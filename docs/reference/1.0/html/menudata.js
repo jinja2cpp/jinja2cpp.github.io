@@ -30,7 +30,6 @@ var menudata={children:[
 {text:"c",url:"namespacemembers.html#index_c"},
 {text:"e",url:"namespacemembers.html#index_e"},
 {text:"f",url:"namespacemembers.html#index_f"},
-{text:"i",url:"namespacemembers.html#index_i"},
 {text:"j",url:"namespacemembers.html#index_j"},
 {text:"l",url:"namespacemembers.html#index_l"},
 {text:"m",url:"namespacemembers.html#index_m"},
@@ -38,13 +37,7 @@ var menudata={children:[
 {text:"r",url:"namespacemembers.html#index_r"},
 {text:"v",url:"namespacemembers.html#index_v"},
 {text:"w",url:"namespacemembers.html#index_w"}]},
-{text:"Functions",url:"namespacemembers_func.html",children:[
-{text:"a",url:"namespacemembers_func.html#index_a"},
-{text:"c",url:"namespacemembers_func.html#index_c"},
-{text:"j",url:"namespacemembers_func.html#index_j"},
-{text:"m",url:"namespacemembers_func.html#index_m"},
-{text:"o",url:"namespacemembers_func.html#index_o"},
-{text:"r",url:"namespacemembers_func.html#index_r"}]},
+{text:"Functions",url:"namespacemembers_func.html"},
 {text:"Typedefs",url:"namespacemembers_type.html"},
 {text:"Enumerations",url:"namespacemembers_enum.html"}]}]},
 {text:"Classes",url:"annotated.html",children:[
@@ -108,7 +101,4 @@ var menudata={children:[
 {text:"Typedefs",url:"functions_type.html"},
 {text:"Related Functions",url:"functions_rela.html"}]}]},
 {text:"Files",url:"files.html",children:[
-{text:"File List",url:"files.html"},
-{text:"File Members",url:"globals.html",children:[
-{text:"All",url:"globals.html"},
-{text:"Macros",url:"globals_defs.html"}]}]}]}
+{text:"File List",url:"files.html"}]}]}

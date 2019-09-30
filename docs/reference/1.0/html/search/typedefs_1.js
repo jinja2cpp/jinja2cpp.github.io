@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['difference_5ftype_414',['difference_type',['../classjinja2_1_1_generic_list_iterator.html#a067f6c1f7eab82e7f6966a4aeb568156',1,'jinja2::GenericListIterator']]]
+  ['errorinfo_352',['ErrorInfo',['../namespacejinja2.html#a5d5d2f1a492185f50964443fa868d828',1,'jinja2']]],
+  ['errorinfow_353',['ErrorInfoW',['../namespacejinja2.html#ae9958e81495c6814880e7ffc14e79960',1,'jinja2']]]
 ];

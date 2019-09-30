@@ -8,11 +8,8 @@ var dir_0f010399f65a277aac918f682439e564 =
     [ "filesystem_handler.h", "filesystem__handler_8h.html", "filesystem__handler_8h" ],
     [ "generic_list.h", "generic__list_8h.html", "generic__list_8h" ],
     [ "generic_list_impl.h", "generic__list__impl_8h.html", "generic__list__impl_8h" ],
-    [ "generic_list_iterator.h", "generic__list__iterator_8h.html", [
-      [ "GenericListIterator", "classjinja2_1_1_generic_list_iterator.html", "classjinja2_1_1_generic_list_iterator" ],
-      [ "Cloner", "structjinja2_1_1_generic_list_iterator_1_1_cloner.html", "structjinja2_1_1_generic_list_iterator_1_1_cloner" ]
-    ] ],
-    [ "reflected_value.h", "reflected__value_8h.html", "reflected__value_8h" ],
+    [ "generic_list_iterator.h", "generic__list__iterator_8h.html", null ],
+    [ "reflected_value.h", "reflected__value_8h.html", null ],
     [ "string_helpers.h", "string__helpers_8h.html", "string__helpers_8h" ],
     [ "template.h", "template_8h.html", "template_8h" ],
     [ "template_env.h", "template__env_8h.html", "template__env_8h" ],
