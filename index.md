@@ -30,6 +30,7 @@ Jinja2C++ is a modern C++ implementation of the [Python Jinja2 template engine](
 - Templates reuse ('include', 'import', 'from')
 - Macros ('macro', 'call').
 - Rich error reporting.
+- Shared template enironment with templates cache support.
 
 [View it on GitHub](https://github.com/jinja2cpp/Jinja2Cpp){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on Conan](https://bintray.com/beta/#/flexferrum/conan-packages/jinja2cpp:flexferrum?tab=overview){: .btn .fs-5 .mb-4 .mb-md-0 }
 
