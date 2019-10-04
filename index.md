@@ -12,7 +12,7 @@ permalink: /
 {: .no_toc }
 
 {: .fs-6 }
-Jinja2C++ is a modern C++ implementation of the [Python Jinja2 template engine](http://jinja.pocoo.org/docs/2.10/). Originally inspired by [Jinja2CppLight](https://github.com/hughperkins/Jinja2CppLight) library now Jinja2C++ brings support of mostly all Jinja2 templates engine features into C++ world.
+Jinja2C++ is a modern C++ implementation of the [Python Jinja2 template engine](http://jinja.pocoo.org/docs/2.10/). Originally, it was inspired by [Jinja2CppLight](https://github.com/hughperkins/Jinja2CppLight) library and now Jinja2C++ brings support for mostly all Jinja2 templates engine features into C++ world.
 {: .fs-6 .fw-300 }
 
 ## Main features of Jinja2C++:
@@ -20,14 +20,14 @@ Jinja2C++ is a modern C++ implementation of the [Python Jinja2 template engine](
 
 - C++14/17 library
 - Supports mainstream compilers (Visual C++, gcc, clang)
-- Easy-to-use interface.
+- Easy-to-use interface/Great UI.
 - Conformance to [Jinja2 specification](http://jinja.pocoo.org/docs/2.10/)
 - Partial support for both narrow- and wide-character strings both for templates and parameters.
-- Built-in reflection for C++ types and popular json libraries ([nlohmann]( https://github.com/nlohmann/json) and [rapid](https://github.com/Tencent/rapidjson))
+- Built-in reflection for C++ types and popular json libraries ([nlohmann]( https://github.com/nlohmann/json) and [rapid](https://github.com/Tencent/rapidjson)).
 - Powerful full-featured Jinja2 expressions with filtering (via '\|' operator) and 'if'-expressions.
 - Control flow statements ('set', 'filter', 'for', 'if', 'do', 'with').
 - Templates extension ('extends', 'block').
-- Templates reuse ('include', 'import', 'from')
+- Templates reuse ('include', 'import', 'from').
 - Macros ('macro', 'call').
 - Rich error reporting.
 - Shared template enironment with templates cache support.
@@ -50,7 +50,7 @@ Jinja2C++ is &copy; 2018-2019 by [Flex Ferrum](https://github.com/flexferrum).
 ### License
 {: .no_toc }
 
-Jinja2C++ is distributed by an [Mozilla Public License 2.0](https://github.com/jinja2cpp/Jinja2Cpp/blob/master/LICENSE).
+Jinja2C++ is distributed by a [Mozilla Public License 2.0](https://github.com/jinja2cpp/Jinja2Cpp/blob/master/LICENSE).
 
 ### Contributing
 {: .no_toc }
