@@ -39,7 +39,7 @@ inline const char* AnimalsToString(Animals e)
 }
 ```
 
-Of course, you can write this producer in the way like [this](https://github.com/flexferrum/autoprogrammer/blob/87a9dc8ff61c7bdd30fede249757b71984e4b954/src/generators/enum2string_generator.cpp#L140). It's too complicated for writing 'from scratch'. Actually, there is a better and simpler way.
+Of course, you can write this producer like [this](https://github.com/flexferrum/autoprogrammer/blob/87a9dc8ff61c7bdd30fede249757b71984e4b954/src/generators/enum2string_generator.cpp#L140). It's too complicated to write 'from scratch'. But there is a better and simpler way.
 
 Firstly, you should define the simple jinja2 template (in the C++ manner):
 {% raw %}
@@ -59,9 +59,9 @@ inline const char* {{enumName}}ToString({{enumName}} e)
 ```
 {% endraw %}
 
-This template is quite basic. Actually, this is the regular text mixed with blocks, which have special meaning. Template parts wrapped with {% raw %}'{{' and '}}'{% endraw %} are expressions. During the template rendering this expression will be evaluated and the result will be inserted into final text. For instance, `{% raw %}{{ enumName }}{% endraw %}` should be replaced with the value of `enumName` param (if any) or should be substituted with an empty string. 
+This template is quite basic. Actually, this is the regular text mixed with blocks, which have special meaning. Template parts wrapped with {% raw %}'{{' and '}}'{% endraw %} are expressions. During the template rendering this expression will be evaluated and the result will be inserted into the final text. For instance, `{% raw %}{{ enumName }}{% endraw %}` should be replaced with the value of `enumName` param (if any) or substituted with an empty string. 
 
-Template parts wrapped in {% raw %}'{%' and '%}'{% endraw %} are "statements" or control blocks. Each of such statement has special meaning and different processing inside Jinja2C++ engine. For instance, `{% raw %}{% for item in items %}...{% endfor %}{% endraw %}` is a loop statement. `items` variable should be a collection and loop body will be inserted into the final text as many times as many items in `items`. The current item can be accessed inside loop body via `item` variable. 
+Template parts wrapped in {% raw %}'{%' and '%}'{% endraw %} are "statements" or control blocks. Such statements have special meaning and different processing inside Jinja2C++ engine. For instance, `{% raw %}{% for item in items %}...{% endfor %}{% endraw %}` is a loop statement. `items` variable should be a collection and loop body will be inserted into the final text as many times as many items in `items`. The current item can be accessed inside loop the body via the `item` variable. 
 
 Template author can define new variables via `set` statement, test expressions via `if`, define macros via `macro`, include other templates via `include` and so on. There are many statements in the Jinja2 specification. But in order to be useful there should be a way to pass parameters to the template engine from the 'outside'. For instance, for the template above `items` should be somehow passed to the Jinja2C++ engine in order to be iterated. And there is a way to do it! Here it is!
 
