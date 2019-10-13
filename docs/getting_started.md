@@ -2,7 +2,7 @@
 layout: default
 title: Getting Started
 nav_order: 2
-description: "Quick start of Jinja2C++ usage"
+description: "How to quickly start using Jinja2C++"
 ---
 
 # Getting started
@@ -16,12 +16,12 @@ Or download the latest release: [Release 0.9.2](https://github.com/jinja2cpp/Jin
 
 Or:
 - Clone the Jinja2C++ [repository](https://github.com/jinja2cpp/Jinja2Cpp)
-- Build it according with the [instructions](build_and_install.html)
-- Link to your project.
+- Build it according to the [instructions](build_and_install.html)
+- Link it with your project.
 
-## The basic example
+## A basic example
 
-Usage of Jinja2C++ in the code is pretty simple:
+Using Jinja2C++ in your code is pretty simple:
 1. Include Jinja2C++ template declaration:
 ```c++
 #include <jinja2/template.h>
@@ -39,7 +39,7 @@ tpl.Load("{{'Hello World' }}!!!");
 std::cout << tpl.RenderAsString(jinja2::ValuesMap{}).value() << std::endl;
 ```
 
-and get:
+and you will get:
 
 `
 Hello World!!!
