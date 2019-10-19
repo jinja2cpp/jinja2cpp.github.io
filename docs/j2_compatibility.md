@@ -16,43 +16,158 @@ nav_order: 7
 ## Current Jinja2 support
 Currently, Jinja2C++ supports the limited number of Jinja2 features. By the way, Jinja2C++ is planned to be full [jinja2 specification](http://jinja.pocoo.org/docs/2.10/templates/)-conformant. The current support is limited to:
 - expressions. You can use every style of expressions: simple, filtered, conditional, and so on.
-- big number of filters (**sort, default, first, last, length, max, min, reverse, unique, sum, attr, map, reject, rejectattr, select, selectattr, pprint, dictsort, abs, float, int, list, round, random, trim, title, upper, wordcount, replace, truncate, groupby, urlencode**)
+- amost all Jinja2 filters (except of `xmlattr` and `tojson`)
 - big number of testers (**eq, defined, ge, gt, iterable, le, lt, mapping, ne, number, sequence, string, undefined, in, even, odd, lower, upper**)
 - limited number of functions (**range**, **loop.cycle**)
 - 'if' statement (with 'elif' and 'else' branches)
 - 'for' statement (with 'else' branch and 'if' part support)
-- 'set' statement
+- 'set' statement (both single-line and block version)
 - 'extends'/'block' statements
 - 'include' statement
 - 'import'/'from' statements
 - 'macro'/'call' statements
 - 'with' statement
+- 'raw' statement
 - 'do' extension statement
+- 'filter' extension statement
 - recursive loops
 - space control
 
 **Jinja2 specifiecation implementation notes**:
-- Wrong precedence of '\|' (pipe) operator (see [#47](https://github.com/jinja2cpp/Jinja2Cpp/issues/47) )
-- Block 'set' statement version doesn't implemented
 
 ## Comparison with other implementations
 
-Feature                       |Jinja2C++                                 |Jinja2CppLight                                 | pantor::inja                             |Python Jinja2
-------------------------------|------------------------------------------|-----------------------------------------------|-----------------------------------------------|---------------
-More information              |                                          | see [1]                                       | see  [2]                                      | see  [3]        
- {% raw %}{{ / }}{% endraw %} | <span style="color:green">yes</span>     | <span style="color:green">yes</span>          | <span style="color:green">yes</span>           | <span style="color:green">yes</span>           
- {% raw %}{% / %}{% endraw %} | <span style="color:green">yes</span>     | <span style="color:green">yes</span>          | <span style="color:green">yes</span>           | <span style="color:green">yes</span>           
- {% raw %}{# / #}{% endraw %} | <span style="color:green">yes</span>     | <span style="color:green">yes</span>          | <span style="color:green">yes</span>           | <span style="color:green">yes</span>           
- Single-line statements       | <span style="color:red">no</span>        | <span style="color:red">no</span>             | <span style="color:green">yes</span>           | <span style="color:green">yes</span>           
-**Statements**                |
-set                           | <span style="color:green">yes</span>     | <span style="color:red">no</span>             | <span style="color:red">no</span>              | <span style="color:green">yes</span>
-block set                     | <span style="color:red">no</span>        | <span style="color:red">no</span>             | <span style="color:red">no</span>              | <span style="color:green">yes</span>
-if / endif                    | <span style="color:green">yes</span>     | <span style="color:green">yes</span>          | <span style="color:green">yes</span>           | <span style="color:green">yes</span>
-else                          | <span style="color:green">yes</span>     | <span style="color:red">no</span>             | <span style="color:green">yes</span>           | <span style="color:green">yes</span>
-elif                          | <span style="color:green">yes</span>     | <span style="color:red">no</span>             | <span style="color:red">no</span>              | <span style="color:green">yes</span>
-for / endfor                  | <span style="color:green">yes</span>     | <span style="color:green">yes</span>          | <span style="color:green">yes</span>           | <span style="color:green">yes</span>
-recursive for loop            | <span style="color:green">yes</span>     | <span style="color:red">no</span>             | <span style="color:red">no</span>              | <span style="color:green">yes</span>
-conditional for loop          | <span style="color:green">yes</span>     | <span style="color:red">no</span>             | <span style="color:red">no</span>              | <span style="color:green">yes</span>
+| Feature                                                  | Jinja2C++                            | Jinja2CppLight                       | pantor::inja                         | Python Jinja2                        |
+|----------------------------------------------------------|--------------------------------------|--------------------------------------|--------------------------------------|--------------------------------------|
+| More information                                         |                                      | see [1]                              | see [2]                              | see [3]                              |
+| {% raw %}{{ / }}{% endraw %}                             | <span style="color:green">yes</span> | <span style="color:green">yes</span> | <span style="color:green">yes</span> | <span style="color:green">yes</span> |
+| {% raw %}{% / %}{% endraw %}                             | <span style="color:green">yes</span> | <span style="color:green">yes</span> | <span style="color:green">yes</span> | <span style="color:green">yes</span> |
+| {% raw %}{# / #}{% endraw %}                             | <span style="color:green">yes</span> | <span style="color:green">yes</span> | <span style="color:green">yes</span> | <span style="color:green">yes</span> |
+| Single-line statements                                   | <span style="color:red">no</span>    | <span style="color:red">no</span>    | <span style="color:green">yes</span> | <span style="color:green">yes</span> |
+| raw/endraw                                               | <span style="color:green">yes</span> | <span style="color:red">no</span>    | <span style="color:red">no</span>    | <span style="color:green">yes</span> |
+| Whitespace control                                       | <span style="color:green">yes</span> | <span style="color:red">no</span>    | <span style="color:green">yes</span> | <span style="color:green">yes</span> |
+| **Statements**                                           |                                      |                                      |                                      |                                      |
+| set                                                      |                                      |                                      |                                      |                                      |
+| block set                                                |                                      |                                      |                                      |                                      |
+| if / endif                                               |                                      |                                      |                                      |                                      |
+| else                                                     |                                      |                                      |                                      |                                      |
+| elif                                                     |                                      |                                      |                                      |                                      |
+| for / endfor                                             |                                      |                                      |                                      |                                      |
+| recursive for loop                                       |                                      |                                      |                                      |                                      |
+| conditional for loop                                     |                                      |                                      |                                      |                                      |
+| extends / block                                          |                                      |                                      |                                      |                                      |
+| import                                                   |                                      |                                      |                                      |                                      |
+| include                                                  |                                      |                                      |                                      |                                      |
+| macro / endmacro                                         |                                      |                                      |                                      |                                      |
+| call                                                     |                                      |                                      |                                      |                                      |
+| filter                                                   |                                      |                                      |                                      |                                      |
+| do                                                       |                                      |                                      |                                      |                                      |
+| **Expressions**                                          |                                      |                                      |                                      |                                      |
+| String literals                                          |                                      |                                      |                                      |                                      |
+| Integer numbers                                          |                                      |                                      |                                      |                                      |
+| Floating numbers                                         |                                      |                                      |                                      |                                      |
+| Lists (`[1, 3, 4]`)                                      |                                      |                                      |                                      |                                      |
+| Tuples (`(1, "one", 3.14)`)                              |                                      |                                      |                                      |                                      |
+| Dicts (`{'dict': 'of', 'key': 'and', 'value': 'pairs'}`) |                                      |                                      |                                      |                                      |
+| `True` / `False`                                         |                                      |                                      |                                      |                                      |
+| `+` operator                                             |                                      |                                      |                                      |                                      |
+| `-` operator                                             |                                      |                                      |                                      |                                      |
+| `/` operator                                             |                                      |                                      |                                      |                                      |
+| `//` operator                                            |                                      |                                      |                                      |                                      |
+| `%` operator                                             |                                      |                                      |                                      |                                      |
+| `*` operator                                             |                                      |                                      |                                      |                                      |
+| `**` operator                                            |                                      |                                      |                                      |                                      |
+| `==` operator                                            |                                      |                                      |                                      |                                      |
+| `!=` operator                                            |                                      |                                      |                                      |                                      |
+| `>` / `<` / `>=` / `<=` operators                        |                                      |                                      |                                      |                                      |
+| `and` / `or` / `not` logical operators                   |                                      |                                      |                                      |                                      |
+| `in` operator                                            |                                      |                                      |                                      |                                      |
+| `is` operator                                            |                                      |                                      |                                      |                                      |
+| `|` (filter application operator)                        |                                      |                                      |                                      |                                      |
+| `~` (string concatenation operator)                      |                                      |                                      |                                      |                                      |
+| `()` (call operator)                                     |                                      |                                      |                                      |                                      |
+| `.`/`[]` (attribute access)                              |                                      |                                      |                                      |                                      |
+| **Filters**                                              |                                      |                                      |                                      |                                      |
+| abs                                                      |                                      |                                      |                                      |                                      |
+| attr                                                     |                                      |                                      |                                      |                                      |
+| batch                                                    |                                      |                                      |                                      |                                      |
+| capitalize                                               |                                      |                                      |                                      |                                      |
+| center                                                   |                                      |                                      |                                      |                                      |
+| default                                                  |                                      |                                      |                                      |                                      |
+| dictsort                                                 |                                      |                                      |                                      |                                      |
+| escape                                                   |                                      |                                      |                                      |                                      |
+| filesizeformat                                           |                                      |                                      |                                      |                                      |
+| first                                                    |                                      |                                      |                                      |                                      |
+| float                                                    |                                      |                                      |                                      |                                      |
+| forceescape                                              |                                      |                                      |                                      |                                      |
+| format                                                   |                                      |                                      |                                      |                                      |
+| groupby                                                  |                                      |                                      |                                      |                                      |
+| indent                                                   |                                      |                                      |                                      |                                      |
+| int                                                      |                                      |                                      |                                      |                                      |
+| join                                                     |                                      |                                      |                                      |                                      |
+| last                                                     |                                      |                                      |                                      |                                      |
+| length                                                   |                                      |                                      |                                      |                                      |
+| list                                                     |                                      |                                      |                                      |                                      |
+| lower                                                    |                                      |                                      |                                      |                                      |
+| map                                                      |                                      |                                      |                                      |                                      |
+| max                                                      |                                      |                                      |                                      |                                      |
+| min                                                      |                                      |                                      |                                      |                                      |
+| pprint                                                   |                                      |                                      |                                      |                                      |
+| random                                                   |                                      |                                      |                                      |                                      |
+| reject                                                   |                                      |                                      |                                      |                                      |
+| rejectattr                                               |                                      |                                      |                                      |                                      |
+| replace                                                  |                                      |                                      |                                      |                                      |
+| reverse                                                  |                                      |                                      |                                      |                                      |
+| round                                                    |                                      |                                      |                                      |                                      |
+| safe                                                     |                                      |                                      |                                      |                                      |
+| select                                                   |                                      |                                      |                                      |                                      |
+| selectattr                                               |                                      |                                      |                                      |                                      |
+| slice                                                    |                                      |                                      |                                      |                                      |
+| sort                                                     |                                      |                                      |                                      |                                      |
+| string                                                   |                                      |                                      |                                      |                                      |
+| striptags                                                |                                      |                                      |                                      |                                      |
+| sum                                                      |                                      |                                      |                                      |                                      |
+| title                                                    |                                      |                                      |                                      |                                      |
+| tojson                                                   |                                      |                                      |                                      |                                      |
+| trim                                                     |                                      |                                      |                                      |                                      |
+| truncate                                                 |                                      |                                      |                                      |                                      |
+| unique                                                   |                                      |                                      |                                      |                                      |
+| upper                                                    |                                      |                                      |                                      |                                      |
+| urlencode                                                |                                      |                                      |                                      |                                      |
+| urlize                                                   |                                      |                                      |                                      |                                      |
+| wordcount                                                |                                      |                                      |                                      |                                      |
+| wordwrap                                                 |                                      |                                      |                                      |                                      |
+| **Testers**                                              |                                      |                                      |                                      |                                      |
+| callable                                                 |                                      |                                      |                                      |                                      |
+| defined                                                  |                                      |                                      |                                      |                                      |
+| devisibleby                                              |                                      |                                      |                                      |                                      |
+| eq                                                       |                                      |                                      |                                      |                                      |
+| escaped                                                  |                                      |                                      |                                      |                                      |
+| even                                                     |                                      |                                      |                                      |                                      |
+| ge                                                       |                                      |                                      |                                      |                                      |
+| gt                                                       |                                      |                                      |                                      |                                      |
+| in                                                       |                                      |                                      |                                      |                                      |
+| iterable                                                 |                                      |                                      |                                      |                                      |
+| le                                                       |                                      |                                      |                                      |                                      |
+| lower                                                    |                                      |                                      |                                      |                                      |
+| lt                                                       |                                      |                                      |                                      |                                      |
+| mapping                                                  |                                      |                                      |                                      |                                      |
+| ne                                                       |                                      |                                      |                                      |                                      |
+| none                                                     |                                      |                                      |                                      |                                      |
+| number                                                   |                                      |                                      |                                      |                                      |
+| odd                                                      |                                      |                                      |                                      |                                      |
+| sameas                                                   |                                      |                                      |                                      |                                      |
+| sequence                                                 |                                      |                                      |                                      |                                      |
+| string                                                   |                                      |                                      |                                      |                                      |
+| undefined                                                |                                      |                                      |                                      |                                      |
+| upper                                                    |                                      |                                      |                                      |                                      |
+| **Testers**                                              |                                      |                                      |                                      |                                      |
+| range                                                    |                                      |                                      |                                      |                                      |
+| lipsum                                                   |                                      |                                      |                                      |                                      |
+| dict                                                     |                                      |                                      |                                      |                                      |
+| cycler                                                   |                                      |                                      |                                      |                                      |
+| joiner                                                   |                                      |                                      |                                      |                                      |
+| namespace                                                |                                      |                                      |                                      |                                      |
 
 ### References
 
