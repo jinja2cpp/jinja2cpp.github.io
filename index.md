@@ -32,13 +32,13 @@ Jinja2C++ is a modern C++ implementation of the [Python Jinja2 template engine](
 - Rich error reporting.
 - Shared template enironment with templates cache support.
 
-[View it on GitHub](https://github.com/jinja2cpp/Jinja2Cpp){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on Conan](https://bintray.com/beta/#/flexferrum/conan-packages/jinja2cpp:flexferrum?tab=overview){: .btn .fs-5 .mb-4 .mb-md-0 }
+[View it on GitHub](https://github.com/jinja2cpp/Jinja2Cpp){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on Conan](https://bintray.com/conan/conan-center/jinja2cpp%3A_){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ## How to get Jinja2C++
 {: .no_toc }
 
 The simplest way: to get the latest conan.io package: [
-jinja2cpp/0.9.1@Manu343726/testing](https://bintray.com/manu343726/conan-packages/jinja2cpp%3AManu343726/0.9.1%3Atesting)
+jinja2cpp/1.1.0](https://bintray.com/conan/conan-center/jinja2cpp%3A_)
 
 Or follow the [build and install instructions](/docs/build_and_install.html)
 
