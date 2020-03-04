@@ -138,7 +138,8 @@ You can define (via -D command line CMake option) the following build flags:
 
 -  **JINJA2CPP_BUILD_TESTS** (default TRUE) - to build or not to Jinja2C++ tests.
 -  **JINJA2CPP_STRICT_WARNINGS** (default TRUE) - Enable strict mode compile-warnings(-Wall -Werror and etc).
--  **MSVC_RUNTIME_TYPE** (default /MD) - MSVC runtime type to link with (if you use Microsoft Visual Studio compiler).
+-  **JINJA2CPP_MSVC_RUNTIME_TYPE** (default /MD) - MSVC runtime type to link with (if you use Microsoft Visual Studio compiler). _Notice_: You don't need to add `d` suffix which means `Debug` version of runtime. Suffix is added automatically.
+-  **JINJA2CPP_BUILD_SHARED** (default FALSE) - to build shared version of Jinja2C++ libraries
 
 ## Link with you projects
 Jinja2C++ is a CMake project and follow the standard ways of the CMake project `find` script implementation. So, you can either include Jinja2C++ as a subproject of your project. In this case you should link against `jinja2cpp` target. All necessary settings are already associated with this target. For instance:
@@ -173,6 +174,7 @@ cmake --build . --target install
 cmake .. -DCMAKE_BUILD_TYPE=Release -Djinja2cpp_DIR=../.jinja2cpp-install/lib/jinja2cpp
 ```
 3. In the CMake script of your project you should find Jinja2C++ with the `find_package` invocation:
+
 ```cmake
 cmake_minimum_required (VERSION 3.0.0 FATAL_ERROR)
 project (Jinja2CppBuildTest CXX)
@@ -188,5 +190,6 @@ target_link_libraries (${TARGET_NAME} jinja2cpp)
 set_target_properties (${TARGET_NAME} PROPERTIES
             CXX_STANDARD 14
             CXX_STANDARD_REQUIRED ON)
+
 ```
 
