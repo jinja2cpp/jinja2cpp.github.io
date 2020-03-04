@@ -16,9 +16,10 @@ nav_order: 4
 ## Supported compilers
 Compilation of Jinja2C++ tested on the following compilers (with C++14 enabled feature):
 - Linux gcc 5.0 - 9
-- Linux clang 5.0 - 8
+- Linux clang 3.8 - 10
 - MacOS X-Code 9 - 11
 - Microsoft Visual Studio 2015-2019 x86, x64
+- MinGW 7, 8
 
 ## Dependencies
 Jinja2C++ has several external dependencies:
@@ -28,8 +29,9 @@ Jinja2C++ has several external dependencies:
 -  `nonstd::optional-lite` [https://github.com/martinmoene/optional-lite](https://github.com/martinmoene/optional-lite)
 -  `nonstd::string-view-lite` [https://github.com/martinmoene/string-view-lite](https://github.com/martinmoene/string-view-lite)
 -  `fmtlib::fmt` [https://github.com/fmtlib/fmt](https://github.com/fmtlib/fmt)
-For testing purposes:
 -  `rapidjson` [https://github.com/Tencent/rapidjson](https://github.com/Tencent/rapidjson)
+
+For testing purposes:
 -  `nlohmannjson` [https://github.com/nlohmann/json](https://github.com/nlohmann/json)
 
 ## Build and install
@@ -68,13 +70,7 @@ In simplest case, if you don't want to understand Jinja2C++ build script interna
 Jinja2C++ can be used as conan.io package. In this case you should do the following steps:
 
 1. Install conan.io according to the documentation ( https://docs.conan.io/en/latest/installation.html )
-2. Register the following remote conan.io repositories:
-    - https://api.bintray.com/conan/martinmoene/nonstd-lite
-    - https://api.bintray.com/conan/bincrafters/public-conan
-    - https://api.bintray.com/conan/flexferrum/conan-packages
-    
-    The sample command is: `conan remote add martin https://api.bintray.com/conan/martinmoene/nonstd-lite`    
-3. Add reference to Jinja2C++ package (`jinja2cpp/0.9.1@Manu343726/testing`) to your conanfile.txt, conanfile.py or CMakeLists.txt. For instance, with usage of `conan-cmake` integration it could be written this way:
+2. Add reference to Jinja2C++ package (`jinja2cpp/1.1.0`) to your conanfile.txt, conanfile.py or CMakeLists.txt. For instance, with usage of `conan-cmake` integration it could be written this way:
 
 ```cmake
 include (../../cmake/conan.cmake)
@@ -83,7 +79,7 @@ if (NOT MSVC)
 endif ()
 
 conan_cmake_run(REQUIRES 
-                    jinja2cpp/0.9.1@Manu343726/testing
+                    jinja2cpp/1.1.0
                     gtest/1.7.0@bincrafters/stable
                 BASIC_SETUP
                 ${CONAN_SETTINGS}
@@ -193,8 +189,4 @@ set_target_properties (${TARGET_NAME} PROPERTIES
             CXX_STANDARD 14
             CXX_STANDARD_REQUIRED ON)
 ```
-
-
-## Build with C++17 standard enabled
-In case of C++17 standard enabled for your project you should define `variant_CONFIG_SELECT_VARIANT=variant_VARIANT_NONSTD` macro in the build settings.
 
