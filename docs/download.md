@@ -43,25 +43,25 @@ nav_order: 5
 
 ## Version 1.0.0
 ### Changes and improvements
-- `default` attribute added to the `map` filter (#48)
-- escape sequences support added to the string literals (#49)
-- arbitrary ranges, generated sequences, input iterators, etc. now can be used with `GenericList` type (#66)
+- `default` attribute added to the `map` filter
+- escape sequences support added to the string literals
+- arbitrary ranges, generated sequences, input iterators, etc. now can be used with `GenericList` type
 - nonstd::string_view is now one of the possible types for the `Value`
-- `filter` tag support added to the template parser (#44)
-- `escape` filter support added to the template parser (#140)
-- `capitalize` filter support added to the template parser (#137)
-- the multiline version of `set` tag added to the parser (#45)
-- added built-in reflection for nlohmann JSON and RapidJSON libraries (#78)
+- `filter` tag support added to the template parser
+- `escape` filter support added to the template parser
+- `capitalize` filter support added to the template parser
+- the multiline version of `set` tag added to the parser
+- added built-in reflection for nlohmann JSON and RapidJSON libraries
 - `loop.depth` and `loop.depth0` variables support added
 - {fmt} is now used as a formatting library instead of iostreams
 - robin hood hash map is now used for internal value storage
 - rendering performance improvements
 - template cache implemented in `TemplateEnv`
 - user-defined callables now can accept global context via `*context` special param
-- MinGW, clang >= 7.0, XCode >= 9, gcc >= 7.0 are now officially supported as a target compilers (#79)
+- MinGW, clang >= 7.0, XCode >= 9, gcc >= 7.0 are now officially supported as a target compilers
 
 ### Fixed bugs
-- Fixed pipe (`|`) operator precedence (#47)
+- Fixed pipe (`|`) operator precedence
 - Fixed bug in internal char <-> wchar_t converter on Windows
 - Fixed crash in parsing `endblock` tag
 - Fixed scope control for `include` and `for` tags
