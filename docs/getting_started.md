@@ -10,9 +10,9 @@ description: "How to quickly start using Jinja2C++"
 ## How to get Jinja2++
 
 Get the latest Conan.io package: [
-jinja2cpp/0.9.1@Manu343726/testing](https://bintray.com/manu343726/conan-packages/jinja2cpp%3AManu343726/0.9.1%3Atesting)
+jinja2cpp/1.1.0](https://bintray.com/conan/conan-center/jinja2cpp%3A_/1.1.0%3A_)
 
-Or download the latest release: [Release 0.9.2](https://github.com/jinja2cpp/Jinja2Cpp/releases/latest)
+Or download the latest release: [Release 1.1.0](https://github.com/jinja2cpp/Jinja2Cpp/releases/latest)
 
 Or:
 - Clone the Jinja2C++ [repository](https://github.com/jinja2cpp/Jinja2Cpp)
@@ -46,3 +46,24 @@ Hello World!!!
 `
 
 That's all!
+
+Full-featured trivial sample source:
+```c++
+#include <jinja2cpp/template.h>
+#include <iostream>
+
+int main()
+{
+    std::string source = R"(
+{{ ("Hello", 'world') | join }}!!!
+{{ ("Hello", 'world') | join(', ') }}!!!
+{{ ("Hello", 'world') | join(d = '; ') }}!!!
+{{ ("Hello", 'world') | join(d = '; ') | lower }}!!!)";
+
+    jinja2::Template tpl;
+    tpl.Load(source);
+
+    std::string result = tpl.RenderAsString(jinja2::ValuesMap()).value();
+    std::cout << result << "\n";
+}
+```
