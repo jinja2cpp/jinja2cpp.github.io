@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Download and Releases
+title: Changelog
 nav_order: 5
 ---
 
@@ -13,6 +13,62 @@ nav_order: 5
 1. TOC
 {:toc}
 
+
+## Version 1.1.0
+### Changes and improvements
+- `batch` filter added
+- `slice` filter added
+- `format` filter added
+- `tojson` filter added
+- `striptags` filter added
+- `center` filter added
+- `xmlattr` filter added
+- `raw`/`endraw` tags added
+- repeat string operator added (e. g. `'a' * 5` will produce `'aaaaa'`)
+- support for templates metadata (`meta`/`endmeta` tags) added
+- `-fPIC` flag added to Linux build configuration
+- support both static and shared versions of library build
+
+### Fixed bugs
+- Fix behavior of lstripblock/trimblocks global settings. Now it fully corresponds to the origina jinja2
+- Fix bug with rendering parent `block` content if child doesn't override this block
+- Fix compilation issues with user-defined callables with number of arguments more than 2
+- Fix access to global Jinja2 functions from included/extended templates
+- Fix point of evaluation of macro params
+- Fix looping over the strings
+- Cleanup warnings
+
+### Breaking changes
+- From now with C++17 standard enabled Jinja2C++ uses standard versions of types `variant`, `string_view` and `optional`
+
+## Version 1.0.0
+### Changes and improvements
+- `default` attribute added to the `map` filter (#48)
+- escape sequences support added to the string literals (#49)
+- arbitrary ranges, generated sequences, input iterators, etc. now can be used with `GenericList` type (#66)
+- nonstd::string_view is now one of the possible types for the `Value`
+- `filter` tag support added to the template parser (#44)
+- `escape` filter support added to the template parser (#140)
+- `capitalize` filter support added to the template parser (#137)
+- the multiline version of `set` tag added to the parser (#45)
+- added built-in reflection for nlohmann JSON and RapidJSON libraries (#78)
+- `loop.depth` and `loop.depth0` variables support added
+- {fmt} is now used as a formatting library instead of iostreams
+- robin hood hash map is now used for internal value storage
+- rendering performance improvements
+- template cache implemented in `TemplateEnv`
+- user-defined callables now can accept global context via `*context` special param
+- MinGW, clang >= 7.0, XCode >= 9, gcc >= 7.0 are now officially supported as a target compilers (#79)
+
+### Fixed bugs
+- Fixed pipe (`|`) operator precedence (#47)
+- Fixed bug in internal char <-> wchar_t converter on Windows
+- Fixed crash in parsing `endblock` tag
+- Fixed scope control for `include` and `for` tags
+- Fixed bug with macros call within expression context
+
+### Breaking changes
+- MSVC runtime type is now defined by `JINJA2CPP_MSVC_RUNTIME_TYPE` CMake variable
 
 ## Version 0.9.2
 ### Major changes
