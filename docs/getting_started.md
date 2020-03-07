@@ -21,6 +21,8 @@ Or:
 
 ## A basic example
 
+Simple example project with Jinja2C++ usage can be found here: https://github.com/jinja2cpp/examples-build/tree/master/conan/1.1.0
+
 Using Jinja2C++ in your code is pretty simple:
 1. Include Jinja2C++ template declaration:
 ```c++
