@@ -47,7 +47,7 @@ Hello World!!!
 
 That's all!
 
-Full-featured trivial sample source:
+Full-featured trivial sample source:{% raw %}
 ```c++
 #include <jinja2cpp/template.h>
 #include <iostream>
@@ -66,4 +66,4 @@ int main()
     std::string result = tpl.RenderAsString(jinja2::ValuesMap()).value();
     std::cout << result << "\n";
 }
-```
+```{% endraw %}
