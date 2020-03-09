@@ -53,10 +53,10 @@ In simplest case, if you don't want to understand Jinja2C++ build script interna
 4. Run CMake and build the library:
 ```
 > cd .build
-> cmake .. -DCMAKE_INSTALL_PREFIX=<path to install folder> -DJINJA2_DEPS_MODE=internal
+> cmake .. -DCMAKE_INSTALL_PREFIX=<path to install folder> -DJINJA2CPP_DEPS_MODE=internal
 > cmake --build . --target install
 ```
-"Path to install folder" here is a path to the folder where you want to install Jinja2Cpp lib. `JINJA2_DEPS_MODE` define with `internal` value creates the build script which will take external dependencies from the submodules.
+"Path to install folder" here is a path to the folder where you want to install Jinja2Cpp lib. `DJINJA2CPP_DEPS_MODE` define with `internal` value creates the build script which will take external dependencies from the submodules.
 5. Build library:
 ```
 > cmake --build . 
