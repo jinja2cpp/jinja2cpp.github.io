@@ -13,6 +13,18 @@ nav_order: 5
 1. TOC
 {:toc}
 
+## Version 1.2.1
+
+### Changes and improvements
+- bump deps versions
+- support modern compilers(up to Clang 12) and standards(C++20)
+- tiny code style cleanup
+
+###Fixed bugs
+- small fixes across code base
+
+### Breaking changes
+- internal deps point to make based boost build
 
 ## Version 1.1.0
 ### Changes and improvements

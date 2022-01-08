@@ -15,15 +15,15 @@ nav_order: 4
 
 ## Supported compilers
 Compilation of Jinja2C++ tested on the following compilers (with C++14 enabled feature):
-- Linux gcc 5.0 - 9
-- Linux clang 3.8 - 10
-- MacOS X-Code 9 - 11
-- Microsoft Visual Studio 2015-2019 x86, x64
+- Linux gcc 5.0 - 11.2
+- Linux clang 3.8 - 13.0.0
+- MacOS X-Code 9 - 13
+- Microsoft Visual Studio 2015-2022 x86, x64
 - MinGW 7, 8
 
 ## Dependencies
 Jinja2C++ has several external dependencies:
--  `boost` library (at least version 1.65) 
+-  `boost` library (at least version 1.65)
 -  `nonstd::expected-lite` [https://github.com/martinmoene/expected-lite](https://github.com/martinmoene/expected-lite)
 -  `nonstd::variant-lite` [https://github.com/martinmoene/variant-lite](https://github.com/martinmoene/variant-lite)
 -  `nonstd::optional-lite` [https://github.com/martinmoene/optional-lite](https://github.com/martinmoene/optional-lite)
@@ -59,18 +59,18 @@ In simplest case, if you don't want to understand Jinja2C++ build script interna
 "Path to install folder" here is a path to the folder where you want to install Jinja2Cpp lib. `DJINJA2CPP_DEPS_MODE` define with `internal` value creates the build script which will take external dependencies from the submodules.
 5. Build library:
 ```
-> cmake --build . 
+> cmake --build .
 ```
 6. Install library (if necessary):
 ```
-> cmake --build . 
+> cmake --build .
 ```
 
 ### Use with conan.io dependency manager
 Jinja2C++ can be used as conan.io package. In this case you should do the following steps:
 
 1. Install conan.io according to the documentation ( https://docs.conan.io/en/latest/installation.html )
-2. Add reference to Jinja2C++ package (`jinja2cpp/1.1.0`) to your conanfile.txt, conanfile.py or CMakeLists.txt. For instance, with usage of `conan-cmake` integration it could be written this way:
+2. Add reference to Jinja2C++ package (`jinja2cpp/1.2.1`) to your conanfile.txt, conanfile.py or CMakeLists.txt. For instance, with usage of `conan-cmake` integration it could be written this way:
 
 ```cmake
 include (../../cmake/conan.cmake)
@@ -78,16 +78,16 @@ if (NOT MSVC)
     set (CONAN_SETTINGS SETTINGS compiler.libcxx=libstdc++11)
 endif ()
 
-conan_cmake_run(REQUIRES 
+conan_cmake_run(REQUIRES
                     jinja2cpp/1.1.0
                     gtest/1.7.0@bincrafters/stable
                 BASIC_SETUP
                 ${CONAN_SETTINGS}
-                OPTIONS 
+                OPTIONS
                     jinja2cpp:shared=False
                     gtest:shared=False
                 BUILD missing)
-                
+
 set (TARGET_NAME jinja2cpp_build_test)
 
 add_executable (${TARGET_NAME} main.cpp)
@@ -178,7 +178,7 @@ cmake .. -DCMAKE_BUILD_TYPE=Release -Djinja2cpp_DIR=../.jinja2cpp-install/lib/ji
 ```cmake
 cmake_minimum_required (VERSION 3.0.0 FATAL_ERROR)
 project (Jinja2CppBuildTest CXX)
-                
+
 set (TARGET_NAME jinja2cpp_build_test)
 set (CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/.jinja2cpp-install)
 

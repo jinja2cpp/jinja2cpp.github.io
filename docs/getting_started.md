@@ -10,9 +10,9 @@ description: "How to quickly start using Jinja2C++"
 ## How to get Jinja2++
 
 Get the latest Conan.io package: [
-jinja2cpp/1.1.0](https://bintray.com/conan/conan-center/jinja2cpp%3A_/1.1.0%3A_)
+jinja2cpp/1.2.1](https://conan.io/center/jinja2cpp)
 
-Or download the latest release: [Release 1.1.0](https://github.com/jinja2cpp/Jinja2Cpp/releases/latest)
+Or download the latest release: [Release 1.2.1](https://github.com/jinja2cpp/Jinja2Cpp/releases/latest)
 
 Or:
 - Clone the Jinja2C++ [repository](https://github.com/jinja2cpp/Jinja2Cpp)
