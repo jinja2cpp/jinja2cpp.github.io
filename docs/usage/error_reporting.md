@@ -28,7 +28,7 @@ It's difficult to write complex template completely without errors. Missed brace
 For example, this template:
 {% raw %}
 ```
-{{ {'key'=,} }}
+{{ {'key':,} }}
 ```
 {% endraw %}
 
@@ -36,7 +36,7 @@ produces the following error message:
 {% raw %}
 ```
 noname.j2tpl:1:11: error: Expected expression, got: ','
-{{ {'key'=,} }}
+{{ {'key':,} }}
        ---^-------
 ```
 {% endraw %}
